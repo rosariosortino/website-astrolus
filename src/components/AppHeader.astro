@@ -8,12 +8,14 @@ import Container from "./Container.astro";
             <div class="flex flex-wrap items-center justify-between py-2 gap-6 md:py-4 md:gap-0 relative">
                 <input aria-hidden="true" type="checkbox" name="toggle_nav" id="toggle_nav" class="hidden peer">
                 <div class="relative z-20 w-full flex justify-between lg:w-max md:px-0">
-                    <a href="#home" aria-label="logo" class="flex space-x-2 items-center">
-                        <div aria-hidden="true" class="flex space-x-1">
-                            <div class="h-4 w-4 rounded-full bg-gray-900 dark:bg-white"></div>
-                            <div class="h-6 w-2 bg-primary"></div>
-                        </div>
-                        <span class="text-2xl font-bold text-gray-900 dark:text-white">Platinum <span class="text-primary">Pro</span></span>
+                    <!-- LOGO TESTUALE CON COLORI ORIGINALI -->
+                    <a href="#home" aria-label="logo" class="flex space-x-1 items-center">
+                        <span class="text-xl font-black tracking-tighter">
+                            <span class="text-[#FF0000]">YouTube</span> 
+                            <span class="text-[#FFD700]">Karaoke</span> 
+                            <span class="text-[#E91E63]">Player</span> 
+                            <span class="text-[#00E5FF]">Pro</span>
+                        </span>
                     </a>
                     
                     <div class="relative flex items-center lg:hidden max-h-10">
@@ -40,7 +42,7 @@ import Container from "./Container.astro";
                             </li>
                             <li>
                                 <a href="/docs" class="block md:px-4 transition hover:text-primary">
-                                    <span>Documentazione</span>
+                                    <span>Manuale</span>
                                 </a>
                             </li>
                         </ul>
