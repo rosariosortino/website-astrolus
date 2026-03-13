@@ -10,27 +10,30 @@ import Container from "./Container.astro"
     <Container>
         <div class="relative pt-36 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
-                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
-                    Platinum Karaoke <span class="text-primary dark:text-white opacity-80">Pro</span>
+                <!-- TITOLO CON COLORI LOGO ORIGINALE -->
+                <h1 class="font-bold text-5xl md:text-6xl xl:text-7xl tracking-tight">
+                    <span class="text-[#FF0000]">YouTube</span> 
+                    <span class="text-[#FFD700]">Karaoke</span> 
+                    <span class="text-[#E91E63]">Player</span> 
+                    <span class="text-[#00E5FF]">Pro</span>
                 </h1>
+
                 <p class="mt-8 text-gray-700 dark:text-gray-300 text-xl md:text-2xl">
                     L'unica regia professionale potenziata dall'Intelligenza Artificiale. 
-                    <span class="text-primary dark:text-cyan-400 font-semibold">Separazione tracce NVIDIA</span>, 
-                    <span class="text-primary dark:text-purple-400 font-semibold">Radar RMS</span> anti-pubblicità e 
-                    <span class="text-primary dark:text-green-400 font-semibold">Smart Booking QR</span>.
+                    <span class="text-[#00E5FF] font-semibold">Separazione tracce NVIDIA</span>, 
+                    <span class="text-[#E91E63] font-semibold">Radar RMS</span> anti-pubblicità e 
+                    <span class="text-[#FFD700] font-semibold">Smart Booking QR</span>.
                 </p>
 
-                <!-- SEZIONE DOWNLOAD STEP-BY-STEP -->
                 <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <!-- STEP 1: SETUP APP -->
+                    <!-- DOWNLOAD STEP 1 -->
                     <a
-                      href="#" 
+                      href="#"
                       class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                     >
                       <span class="relative text-base font-semibold text-white">1. Scarica Setup Player (127MB)</span>
                     </a>
-                    
-                    <!-- STEP 2: INSTALLER MOTORE -->
+                    <!-- DOWNLOAD STEP 2 -->
                     <a
                       href="#"
                       class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
@@ -43,23 +46,23 @@ import Container from "./Container.astro"
                     <p class="text-sm text-gray-500 italic">
                         *L'installer del motore scaricherà automaticamente il pacchetto IA completo (6.3GB).
                     </p>
-                    <p class="mt-4 text-sm font-bold text-primary dark:text-cyan-400">
-                        Versione TRIAL inclusa - Diventa PRO istantaneamente dopo l'acquisto.
+                    <p class="mt-4 text-sm font-bold text-[#00E5FF]">
+                        Versione TRIAL inclusa - Creato da Rosario Sortino
                     </p>
                 </div>
 
                 <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
                     <div class="text-left">
                         <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Zero Latenza</h6>
-                        <p class="mt-2 text-gray-500 italic">Ottimizzato per GPU NVIDIA</p>
+                        <p class="mt-2 text-gray-500 italic text-sm">Engine C++ & NVIDIA CUDA</p>
                     </div>
                     <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">YouTube Pulito</h6>
-                        <p class="mt-2 text-gray-500 italic">Radar RMS Anti-Garbage</p>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Qualità Studio</h6>
+                        <p class="mt-2 text-gray-500 italic text-sm">Separazione Audio IA</p>
                     </div>
                     <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Addio Carta</h6>
-                        <p class="mt-2 text-gray-500 italic">Prenotazioni via QR Code</p>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Interactiva</h6>
+                        <p class="mt-2 text-gray-500 italic text-sm">Web Server Prenotazioni</p>
                     </div>
                 </div>
             </div>
