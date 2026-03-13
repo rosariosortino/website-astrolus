@@ -3,86 +3,76 @@ import Container from "./Container.astro"
 ---
 
 <div class="relative bg-[#050505] overflow-hidden" id="home">
-    <!-- SFONDO HI-TECH: Gradianti molto scuri e sottili invece di quelli pastello -->
+    <!-- SFONDO HI-TECH -->
     <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-30">
         <div class="blur-[120px] h-80 bg-gradient-to-br from-blue-900 to-transparent"></div>
         <div class="blur-[120px] h-60 bg-gradient-to-r from-[#E91E63] to-transparent opacity-10"></div>
     </div>
 
     <Container>
-        <div class="relative pt-36 ml-auto">
+        <div class="relative pt-24 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
-                <!-- TITOLO: Effetto Neon come il logo del software -->
-                <h1 class="font-black text-6xl md:text-7xl xl:text-8xl tracking-tighter uppercase italic">
-                    <span class="text-[#FF0000] drop-shadow-[0_0_15px_rgba(255,0,0,0.5)]">YouTube</span> 
-                    <span class="text-[#FFD700] drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]">Karaoke</span> <br/>
-                    <span class="text-[#E91E63] drop-shadow-[0_0_15px_rgba(233,30,99,0.5)]">Player</span> 
-                    <span class="text-[#00E5FF] drop-shadow-[0_0_15px_rgba(0,229,255,0.7)]">Pro</span>
+                
+                <!-- LOGO CENTRALE CON EFFETTO NEON -->
+                <div class="relative inline-block mb-8">
+                    <!-- Bagliore dietro il logo -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#E91E63] blur-3xl opacity-40 animate-pulse"></div>
+                    
+                    <img 
+                        src="/logo-platinum.png" 
+                        alt="YouTube Karaoke Player Pro Logo" 
+                        class="relative z-10 w-64 h-64 md:w-80 md:h-80 mx-auto drop-shadow-[0_0_30px_rgba(0,229,255,0.5)]"
+                    />
+                </div>
+
+                <!-- TITOLO TESTUALE (SOTTO IL LOGO) -->
+                <h1 class="font-black text-4xl md:text-5xl uppercase italic tracking-tighter text-white">
+                    <span class="text-[#FF0000]">YouTube</span> Karaoke Player <span class="text-[#00E5FF]">Pro</span>
                 </h1>
 
-                <p class="mt-10 text-gray-400 text-xl md:text-2xl font-light leading-relaxed">
+                <p class="mt-6 text-gray-400 text-lg md:text-xl font-light leading-relaxed">
                     L'unica regia professionale potenziata dall'Intelligenza Artificiale. <br/>
-                    <span class="text-[#00E5FF] border-b border-[#00E5FF]/30 pb-1">Separazione tracce NVIDIA</span>, 
-                    <span class="text-[#FF1744] border-b border-[#FF1744]/30 pb-1 mx-2">Radar RMS</span> e 
-                    <span class="text-[#00E676] border-b border-[#00E676]/30 pb-1">Smart Booking QR</span>.
+                    <span class="text-[#00E5FF] font-semibold">Separazione tracce NVIDIA</span> | 
+                    <span class="text-[#FF1744] font-semibold">Radar RMS</span> | 
+                    <span class="text-[#00E676] font-semibold">Smart Booking QR</span>
                 </p>
 
-                <!-- PULSANTI: Stile "Console" come i tasti PLAY/STOP del tuo software -->
-                <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <a
-                      href="#"
-                      class="relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 before:absolute before:inset-0 before:bg-[#00E676] before:transition-transform hover:before:scale-105 active:before:scale-95 sm:w-max border-2 border-[#00E676] shadow-[0_0_20px_rgba(0,230,118,0.3)]"
-                    >
-                      <span class="relative text-lg font-black text-black uppercase tracking-widest">1. Scarica Setup Player</span>
+                <!-- PULSANTI CONSOLE -->
+                <div class="mt-12 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                    <a href="#" class="btn-platinum-green">
+                        <span>1. Scarica Setup Player</span>
                     </a>
-                    
-                    <a
-                      href="#"
-                      class="relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 before:absolute before:inset-0 before:bg-transparent before:border-2 before:border-[#00E5FF] hover:before:bg-[#00E5FF]/10 active:before:scale-95 sm:w-max shadow-[0_0_20px_rgba(0,229,255,0.2)]"
-                    >
-                      <span class="relative text-lg font-black text-[#00E5FF] uppercase tracking-widest">2. Installa Motore IA</span>
+                    <a href="#" class="btn-platinum-cyan">
+                        <span>2. Installa Motore IA</span>
                     </a>
                 </div>
                 
-                <div class="mt-8 text-center">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">
-                         AI Pack: 6.3GB | CUDA Support Required | Windows 10/11
-                    </p>
-                    <div class="mt-6 inline-block border border-[#00E5FF]/50 px-4 py-2 bg-[#00E5FF]/5">
-                        <span class="text-sm font-bold text-[#00E5FF] uppercase tracking-tighter">
-                            Status: Versione TRIAL inclusa - Dev: Rosario Sortino
-                        </span>
+                <!-- FOOTER HERO -->
+                <div class="mt-12 py-8 border-t border-white/5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="p-4 bg-white/5 border-l-2 border-[#00E5FF]">
+                        <p class="text-white font-bold uppercase text-sm tracking-widest">Zero Latenza</p>
+                        <p class="text-gray-500 text-xs">Engine C++ & CUDA</p>
+                    </div>
+                    <div class="p-4 bg-white/5 border-l-2 border-[#E91E63]">
+                        <p class="text-white font-bold uppercase text-sm tracking-widest">Qualità Studio</p>
+                        <p class="text-gray-500 text-xs">Audio IA Demucs v4</p>
+                    </div>
+                    <div class="p-4 bg-white/5 border-l-2 border-[#FFD700]">
+                        <p class="text-white font-bold uppercase text-sm tracking-widest">Interactiva</p>
+                        <p class="text-gray-500 text-xs">Smart Booking QR</p>
                     </div>
                 </div>
 
-                <!-- BOX CARATTERISTICHE: Simili ai moduli del tuo software -->
-                <div class="py-10 mt-20 border-t border-gray-900 grid grid-cols-1 sm:grid-cols-3 gap-8">
-                    <div class="bg-[#0d0d0d] border-l-4 border-[#00E5FF] p-6 text-left">
-                        <h6 class="text-sm font-black text-[#00E5FF] uppercase tracking-widest">Performance</h6>
-                        <p class="text-2xl font-bold text-white mt-1">Zero Latenza</p>
-                        <p class="mt-2 text-gray-500 text-xs font-mono uppercase">Engine C++ & NVIDIA CUDA</p>
-                    </div>
-                    <div class="bg-[#0d0d0d] border-l-4 border-[#E91E63] p-6 text-left">
-                        <h6 class="text-sm font-black text-[#E91E63] uppercase tracking-widest">Processing</h6>
-                        <p class="text-2xl font-bold text-white mt-1">Qualità Studio</p>
-                        <p class="mt-2 text-gray-500 text-xs font-mono uppercase">Separazione Audio IA</p>
-                    </div>
-                    <div class="bg-[#0d0d0d] border-l-4 border-[#FFD700] p-6 text-left">
-                        <h6 class="text-sm font-black text-[#FFD700] uppercase tracking-widest">Interactive</h6>
-                        <p class="text-2xl font-bold text-white mt-1">Smart Stage</p>
-                        <p class="mt-2 text-gray-500 text-xs font-mono uppercase">Web Server Prenotazioni</p>
-                    </div>
-                </div>
             </div>
         </div>
     </Container>
 </div>
 
 <style>
-    /* Aggiungiamo un font più "quadrato" e moderno per ricordare la UI del software */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-    
-    #home {
-        font-family: 'Inter', sans-serif;
+    .btn-platinum-green {
+        @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest hover:shadow-[0_0_30px_rgba(0,230,118,0.5)] hover:scale-105;
+    }
+    .btn-platinum-cyan {
+        @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:scale-105;
     }
 </style>
