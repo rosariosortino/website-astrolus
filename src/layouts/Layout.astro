@@ -2,6 +2,7 @@
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro"
 ---
+
 <!DOCTYPE html>
 <html lang="it" class="dark">
 	<head>
@@ -13,13 +14,22 @@ import AppHeader from "../components/AppHeader.astro"
 		<title>YouTube Karaoke Player Pro | Platinum Project IA</title>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-[#050505] text-white">
+	<body class="bg-[#050505] text-white antialiased">
 		<AppHeader/>
 		<slot />
 		<AppFooter/>
 	</body>
 </html>
+
 <style is:global>
-	html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #050505; }
-	body { margin: 0; overflow-x: hidden; }
+	html {
+		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
+		background-color: #050505;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
 </style>
