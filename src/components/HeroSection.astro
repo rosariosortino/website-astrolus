@@ -6,39 +6,42 @@ import Container from "./Container.astro"
     <!-- SFONDO HI-TECH -->
     <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-30">
         <div class="blur-[120px] h-80 bg-gradient-to-br from-blue-900 to-transparent"></div>
-        <div class="blur-[120px] h-60 bg-gradient-to-r from-[#E91E63] to-transparent opacity-10"></div>
+        <div class="blur-[120px] h-60 bg-gradient-to-r from-[#FF2D55] to-transparent opacity-10"></div>
     </div>
 
     <Container>
-        <div class="relative pt-24 ml-auto">
+        <!-- SPAZIO SUPERIORE AUMENTATO (pt-52) PER STACCARE DAL MENU -->
+        <div class="relative pt-52 pb-20 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
                 
-                <!-- LOGO CENTRALE CON EFFETTO NEON -->
-                <div class="relative inline-block mb-8">
-                    <!-- Bagliore dietro il logo -->
-                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#E91E63] blur-3xl opacity-40 animate-pulse"></div>
+                <!-- LOGO CENTRALE CON GLOW BILANCIATO -->
+                <div class="relative inline-block mb-16">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#FF2D55] blur-3xl opacity-30 animate-pulse"></div>
                     
                     <img 
                         src="/logo-platinum.png" 
                         alt="YouTube Karaoke Player Pro Logo" 
-                        class="relative z-10 w-64 h-64 md:w-80 md:h-80 mx-auto drop-shadow-[0_0_30px_rgba(0,229,255,0.5)]"
+                        class="relative z-10 w-64 h-64 md:w-80 md:h-80 mx-auto drop-shadow-[0_0_40px_rgba(0,229,255,0.4)]"
                     />
                 </div>
 
-                <!-- TITOLO TESTUALE (SOTTO IL LOGO) -->
-                <h1 class="font-black text-4xl md:text-5xl uppercase italic tracking-tighter text-white">
-                    <span class="text-[#FF0000]">YouTube</span> Karaoke Player <span class="text-[#00E5FF]">Pro</span>
+                <!-- TITOLO CON COLORI NEON ESATTI -->
+                <h1 class="font-black text-5xl md:text-6xl uppercase italic tracking-tighter leading-none">
+                    <span class="text-[#FF0000] drop-shadow-[0_0_10px_rgba(255,0,0,0.6)]">YouTube</span> 
+                    <span class="text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.6)]">Karaoke</span> <br/>
+                    <span class="text-[#FF2D55] drop-shadow-[0_0_15px_rgba(255,45,85,0.8)]">Player</span> 
+                    <span class="text-[#00E5FF] drop-shadow-[0_0_15px_rgba(0,229,255,0.8)]">Pro</span>
                 </h1>
 
-                <p class="mt-6 text-gray-400 text-lg md:text-xl font-light leading-relaxed">
+                <p class="mt-8 text-gray-400 text-xl md:text-2xl font-light">
                     L'unica regia professionale potenziata dall'Intelligenza Artificiale. <br/>
-                    <span class="text-[#00E5FF] font-semibold">Separazione tracce NVIDIA</span> | 
-                    <span class="text-[#FF1744] font-semibold">Radar RMS</span> | 
-                    <span class="text-[#00E676] font-semibold">Smart Booking QR</span>
+                    <span class="text-[#00E5FF] font-bold">Separazione tracce NVIDIA</span> | 
+                    <span class="text-[#FF2D55] font-bold">Radar RMS</span> | 
+                    <span class="text-[#FFD700] font-bold">Smart Booking QR</span>
                 </p>
 
-                <!-- PULSANTI CONSOLE -->
-                <div class="mt-12 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                <!-- PULSANTI CONSOLE AGGIORNATI -->
+                <div class="mt-14 flex flex-wrap justify-center gap-y-4 gap-x-6">
                     <a href="#" class="btn-platinum-green">
                         <span>1. Scarica Setup Player</span>
                     </a>
@@ -46,33 +49,17 @@ import Container from "./Container.astro"
                         <span>2. Installa Motore IA</span>
                     </a>
                 </div>
-                
-                <!-- FOOTER HERO -->
-                <div class="mt-12 py-8 border-t border-white/5 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div class="p-4 bg-white/5 border-l-2 border-[#00E5FF]">
-                        <p class="text-white font-bold uppercase text-sm tracking-widest">Zero Latenza</p>
-                        <p class="text-gray-500 text-xs">Engine C++ & CUDA</p>
-                    </div>
-                    <div class="p-4 bg-white/5 border-l-2 border-[#E91E63]">
-                        <p class="text-white font-bold uppercase text-sm tracking-widest">Qualità Studio</p>
-                        <p class="text-gray-500 text-xs">Audio IA Demucs v4</p>
-                    </div>
-                    <div class="p-4 bg-white/5 border-l-2 border-[#FFD700]">
-                        <p class="text-white font-bold uppercase text-sm tracking-widest">Interactiva</p>
-                        <p class="text-gray-500 text-xs">Smart Booking QR</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </Container>
 </div>
 
 <style>
+    /* COLORI PULSANTI COME I LED DEL SOFTWARE */
     .btn-platinum-green {
-        @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest hover:shadow-[0_0_30px_rgba(0,230,118,0.5)] hover:scale-105;
+        @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,230,118,0.6)] hover:scale-105;
     }
     .btn-platinum-cyan {
-        @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:scale-105;
+        @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest hover:bg-[#00E5FF]/10 hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-105;
     }
 </style>
