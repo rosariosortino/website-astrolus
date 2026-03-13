@@ -2,32 +2,64 @@
 import Container from "./Container.astro"
 ---
 <div class="relative bg-[#050505] overflow-hidden" id="home">
-    <div class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-30">
+    <!-- SFONDO HI-TECH NEON -->
+    <div class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-30 pointer-events-none">
         <div class="blur-[120px] h-80 bg-gradient-to-br from-blue-900 to-transparent"></div>
         <div class="blur-[120px] h-60 bg-gradient-to-r from-[#FF2D55] to-transparent opacity-10"></div>
     </div>
+
     <Container>
         <div class="relative pt-52 pb-20 ml-auto">
-            <div class="lg:w-2/3 text-center mx-auto">
-                <div class="relative inline-block mb-16">
-                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#FF2D55] blur-3xl opacity-30 animate-pulse"></div>
-                    <img src="/logo-platinum.png" alt="Logo" class="relative z-10 mx-auto" style="width: 320px; height: 320px; filter: drop-shadow(0 0 40px rgba(0,229,255,0.4));"/>
+            <div class="lg:w-full text-center mx-auto">
+                
+                <!-- LOGO CENTRALE MONUMENTALE (480px) -->
+                <div class="relative inline-block mb-16 group">
+                    <!-- Aura di luce pulsante dietro il logo -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#FF2D55] blur-[100px] opacity-20 animate-pulse group-hover:opacity-40 transition-opacity duration-700"></div>
+                    
+                    <img 
+                        src="/logo-platinum.png" 
+                        alt="Logo Platinum Project" 
+                        class="relative z-10 mx-auto transition-all duration-1000 group-hover:scale-105" 
+                        style="width: 480px; max-width: 90vw; height: auto; filter: drop-shadow(0 0 60px rgba(0,229,255,0.4));"
+                    />
                 </div>
-                <h1 class="font-black text-5xl md:text-6xl uppercase italic tracking-tighter leading-none text-white">
-                    <span class="text-[#FF0000]">YouTube</span> <span class="text-[#FFD700]">Karaoke</span> <br/>
-                    <span class="text-[#FF2D55]">Player</span> <span class="text-[#00E5FF]">Pro</span>
+
+                <!-- TITOLO CON COLORI NEON ESATTI -->
+                <h1 class="font-black text-6xl md:text-7xl lg:text-8xl uppercase italic tracking-tighter leading-none text-white">
+                    <span class="text-[#FF0000] drop-shadow-[0_0_15px_rgba(255,0,0,0.5)]">YouTube</span> 
+                    <span class="text-[#FFD700] drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]">Karaoke</span> <br/>
+                    <span class="text-[#FF2D55] drop-shadow-[0_0_20px_rgba(255,45,85,0.7)]">Player</span> 
+                    <span class="text-[#00E5FF] drop-shadow-[0_0_20px_rgba(0,229,255,0.7)]">Pro</span>
                 </h1>
-                <div class="mt-10 px-4">
-                    <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-4">
-                        La fine degli standard chiusi. <span class="text-[#00E5FF]">L'inizio della tua libertà.</span>
+
+                <!-- IL MESSAGGIO DELLA RIVOLUZIONE -->
+                <div class="mt-12 px-4 max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-6">
+                        La fine degli standard chiusi. <br class="hidden md:block"/>
+                        <span class="text-[#00E5FF]">L'inizio della tua libertà.</span>
                     </h2>
-                    <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                        Basta abbonamenti infiniti. Platinum Karaoke Pro crea basi professionali con <span class="text-white font-bold">Standard Libero</span>. Potenza <span class="text-[#FF2D55] font-bold">IA NVIDIA</span> e regia <span class="text-[#00E676] font-bold">MPV Cinema</span>.
+                    <p class="text-gray-400 text-xl md:text-2xl font-light leading-relaxed">
+                        Basta abbonamenti infiniti e formati proprietari obsoleti. Platinum Karaoke Pro crea basi professionali con <span class="text-white font-bold">Standard Libero</span>: le crei una volta, le usi su ogni player del mondo. 
+                        <br/><br/>
+                        Potenza <span class="text-[#FF2D55] font-bold uppercase">IA NVIDIA</span> e la perfezione del <span class="text-[#00E676] font-bold uppercase">Motore MPV Cinema</span>.
                     </p>
                 </div>
-                <div class="mt-14 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <a href="#" class="btn-green"><span>1. Scarica Setup Player</span></a>
-                    <a href="#" class="btn-cyan"><span>2. Installa Motore IA</span></a>
+
+                <!-- PULSANTI AZIONE STILE CONSOLE -->
+                <div class="mt-16 flex flex-wrap justify-center gap-y-6 gap-x-8">
+                    <a href="#" class="btn-platinum-green">
+                        <span>1. Scarica Setup Player</span>
+                    </a>
+                    <a href="#" class="btn-platinum-cyan">
+                        <span>2. Installa Motore IA</span>
+                    </a>
+                </div>
+
+                <div class="mt-12">
+                     <p class="text-xs text-gray-500 uppercase tracking-[0.3em] font-bold opacity-50">
+                         AI Pack: 6.3GB | NVIDIA CUDA Core Required | Windows 10/11
+                    </p>
                 </div>
             </div>
         </div>
@@ -35,6 +67,16 @@ import Container from "./Container.astro"
 </div>
 
 <style>
-    .btn-green { @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,230,118,0.6)] hover:scale-105; }
-    .btn-cyan { @apply relative flex h-14 w-full items-center justify-center px-8 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest hover:bg-[#00E5FF]/10 hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-105; }
+    /* STILE PULSANTI LED/NEON */
+    .btn-platinum-green {
+        @apply relative flex h-16 w-full items-center justify-center px-10 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest text-lg hover:shadow-[0_0_50px_rgba(0,230,118,0.6)] hover:scale-110 active:scale-95;
+    }
+    .btn-platinum-cyan {
+        @apply relative flex h-16 w-full items-center justify-center px-10 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest text-lg hover:bg-[#00E5FF]/10 hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-110 active:scale-95;
+    }
+
+    /* Animazione fluida del testo Hero */
+    h1 span {
+        display: inline-block;
+    }
 </style>
