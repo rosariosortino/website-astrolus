@@ -3,32 +3,56 @@ import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro"
 ---
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Template built with tailwindcss using Tailus blocks v2">
-		<title>Steven-theme</title>
+		
+		<!-- SEO E DESCRIZIONE PROFESSIONALE -->
+		<meta name="description" content="YouTube Karaoke Player Pro: La prima regia karaoke professionale potenziata da Intelligenza Artificiale. Separazione tracce NVIDIA, Radar RMS e Smart Booking QR.">
+		
+		<!-- TITOLO DEFINITIVO DELLA LINGUETTA -->
+		<title>YouTube Karaoke Player Pro | Platinum Project IA</title>
 
 		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-white dark:bg-gray-900">
+	
+	<!-- FORZATO SFONDO NERO COME IL SOFTWARE (#050505) -->
+	<body class="bg-[#050505] text-white selection:bg-[#00E5FF] selection:text-black">
 		<AppHeader/>
 		<slot />
 		<AppFooter/>
 	</body>
 </html>
-<style>
+
+<style is:global>
 	html {
 		font-family: Urbanist, sans-serif;
 		scroll-behavior: smooth;
+		background: #050505; /* Evita flash bianchi al caricamento */
 	}
 
 	body {
 		margin: 0;
+		overflow-x: hidden;
+	}
+
+	/* PERSONALIZZAZIONE SCROLLBAR STILE PLATINUM */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #050505;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #1a1a1a;
+		border: 2px solid #050505;
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #00E5FF; /* Colore Cyan quando ci passi sopra */
 	}
 </style>
