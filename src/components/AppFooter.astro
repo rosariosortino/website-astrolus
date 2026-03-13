@@ -1,23 +1,17 @@
 ---
 import Container from "./Container.astro"
 ---
-<footer class="py-20 border-t border-gray-800 bg-[#050505]">
+<footer class="py-20 border-t border-white/5 bg-[#050505]">
     <Container>
-      <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
-        <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
-          <div class="flex w-full justify-center space-x-12 text-gray-400 sm:w-max">
-            <a href="#home" class="hover:text-primary transition">Home</a>
-            <a href="#features" class="hover:text-primary transition">Caratteristiche</a>
-            <a href="mailto:rosario.sortino@gmail.com" class="hover:text-primary transition">Supporto</a>
-          </div>
-          <div class="w-full mt-8 text-center sm:mt-0 sm:w-max">
-            <span class="text-gray-500">&copy; Platinum Project <span id="year"></span> - Sviluppato da Rosario Sortino</span>
-          </div>
+      <div class="flex flex-wrap items-center justify-between">
+        <div class="flex w-full justify-center space-x-12 text-gray-400 sm:w-max uppercase text-xs font-bold tracking-widest">
+          <a href="#home" class="hover:text-[#00E5FF]">Home</a>
+          <a href="#features" class="hover:text-[#00E5FF]">Funzioni</a>
+          <a href="mailto:rosario.sortino@gmail.com" class="hover:text-[#FF2D55]">Supporto Tecnico</a>
+        </div>
+        <div class="w-full mt-8 text-center sm:mt-0 sm:w-max">
+          <span class="text-gray-600 text-sm">© Platinum Project {new Date().getFullYear()} - Dev: Rosario Sortino</span>
         </div>
       </div>
     </Container>
 </footer>
-
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
