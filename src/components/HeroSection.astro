@@ -1,8 +1,9 @@
 ---
+// src/components/HeroSection.astro
 import Container from "./Container.astro"
 import languages from "../languages.json"
 
-// Recupera la lingua passata come proprietà, default "it"
+// Recupera la lingua passata come proprietà dal "regista" (index.astro)
 const { lang = "it" } = Astro.props;
 const t = languages[lang] || languages["it"];
 ---
