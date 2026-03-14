@@ -1,28 +1,26 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro"
+
+// Recuperiamo la lingua dalle proprietà, default "it"
+const { lang = "it" } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="it" class="dark">
+<html lang={lang} class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>YouTube Karaoke Player Pro | Platinum Project IA</title>
-		<meta name="description" content="L'unica regia professionale Karaoke con Intelligenza Artificiale, Motore MPV e Standard Libero.">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-[#050505] text-white selection:bg-[#00E5FF] selection:text-black">
-		<AppHeader/>
+	<body class="bg-[#050505] text-white antialiased">
+		<AppHeader lang={lang}/>
 		<slot />
-		<AppFooter/>
+		<AppFooter lang={lang}/>
 	</body>
 </html>
 <style is:global>
 	html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #050505; }
 	body { margin: 0; overflow-x: hidden; }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #050505; }
-    ::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: #00E5FF; }
 </style>
