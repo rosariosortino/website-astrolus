@@ -1,23 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AppHeader from "../components/AppHeader.astro";
 import HeroSection from "../components/HeroSection.astro";
-import Features from "../components/Features.astro";
-import CallToAction from "../components/CallToAction.astro"; // <-- ECCO IL PEZZO MANCANTE!
+import CallToAction from "../components/CallToAction.astro"; // <-- Aggiunto import
 
-// 1. Importiamo il nostro dizionario JSON
 import translations from "../languages.json";
-
-// 2. Impostiamo la lingua di default (es: "it" per italiano, "es" per spagnolo)
-// In futuro questo cambierà in base al menu, per ora lo testiamo in italiano
-const currentLang = "it"; 
-
-// 3. Peschiamo solo il blocco di testi della lingua scelta
-const t = translations[currentLang];
+const lang = "it";
+const t = translations[lang];
 ---
 
-<Layout lang={currentLang}>
-  {/* Passiamo la variabile "t" (che contiene tutte le traduzioni) a ogni componente */}
-  <HeroSection t={t} />
-  <Features t={t} />
-  <CallToAction t={t} />
+<Layout lang={lang}>
+  <AppHeader />
+  
+  <main class="space-y-10">
+    <HeroSection t={t} />
+    
+    {/* Features le mettiamo dopo, stiamo andando per gradi */}
+    
+    <CallToAction t={t} /> {/* <-- Aggiunto componente */}
+  </main>
 </Layout>
