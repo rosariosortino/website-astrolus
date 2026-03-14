@@ -47,6 +47,11 @@
     "feat_watchdog_desc": "Monitor Heartbeat che riavvia i processi in 2 secondi in caso di freeze.",
     "payoff_1": "Smetti di essere un KJ.",
     "payoff_2": "Inizia a fare il REGISTA.",
+    "why_title": "PERCHÉ SCEGLIERE PLATINUM?",
+    "why_p1": "20GB di pura potenza tecnologica (Modelli IA residenti sul tuo PC).",
+    "why_p2": "Automazione Totale: La serata scorre da sola, tu devi solo goderti gli applausi.",
+    "why_p3": "Sincronizzazione Cloud: Attivazione istantanea e licenza blindata.",
+    "why_p4": "Sviluppato per Professionisti da chi il palco lo vive davvero.",
     "footer_support": "Supporto Tecnico"
   },
   "es": {
@@ -97,6 +102,11 @@
     "feat_watchdog_desc": "Monitor Heartbeat que reinicia procesos en 2 segundos en caso de bloqueo.",
     "payoff_1": "Deja de ser un KJ.",
     "payoff_2": "Empieza a ser un DIRECTOR.",
+    "why_title": "¿POR QUÉ ELEGIR PLATINUM?",
+    "why_p1": "20GB de pura potencia tecnológica (Modelos de IA residentes en tu PC).",
+    "why_p2": "Automatización Total: La noche fluye sola, tú solo debes disfrutar de los aplausos.",
+    "why_p3": "Sincronización en la Nube: Activación instantánea y licencia blindada.",
+    "why_p4": "Desarrollado para Profesionales por quienes realmente viven el escenario.",
     "footer_support": "Soporte Técnico"
   },
   "en": {
@@ -147,6 +157,11 @@
     "feat_watchdog_desc": "Heartbeat monitor that reboots processes in 2s in case of hardware freeze.",
     "payoff_1": "Stop being a KJ.",
     "payoff_2": "Start being a DIRECTOR.",
+    "why_title": "WHY CHOOSE PLATINUM?",
+    "why_p1": "20GB of pure technological power (AI Models residing on your PC).",
+    "why_p2": "Total Automation: The night runs itself, you just enjoy the applause.",
+    "why_p3": "Cloud Synchronization: Instant activation and bulletproof license.",
+    "why_p4": "Developed for Professionals by those who truly live the stage.",
     "footer_support": "Technical Support"
   },
   "fr": {
@@ -197,6 +212,11 @@
     "feat_watchdog_desc": "Moniteur Heartbeat qui relance les processus en 2s en cas de freeze.",
     "payoff_1": "Arrêtez d'être un KJ.",
     "payoff_2": "Devenez RÉALISATEUR.",
+    "why_title": "POURQUOI CHOISIR PLATINUM ?",
+    "why_p1": "20 Go de pure puissance technologique (Modèles d'IA résidents sur votre PC).",
+    "why_p2": "Automatisation Totale : La soirée se déroule toute seule, profitez juste des applaudissements.",
+    "why_p3": "Synchronisation Cloud : Activation instantanée et licence blindée.",
+    "why_p4": "Développé pour les Professionnels par ceux qui vivent vraiment la scène.",
     "footer_support": "Support Technique"
   },
   "de": {
@@ -247,6 +267,11 @@
     "feat_watchdog_desc": "Heartbeat-Monitor startet Prozesse bei Freeze in 2s neu.",
     "payoff_1": "Hör auf, ein KJ zu sein.",
     "payoff_2": "Werde REGISSEUR.",
+    "why_title": "WARUM PLATINUM WÄHLEN?",
+    "why_p1": "20GB pure technologische Leistung (KI-Modelle direkt auf Ihrem PC).",
+    "why_p2": "Totale Automatisierung: Der Abend läuft von selbst, Sie genießen nur den Applaus.",
+    "why_p3": "Cloud-Synchronisation: Sofortige Aktivierung und kugelsichere Lizenz.",
+    "why_p4": "Entwickelt für Profis von denen, die die Bühne wirklich leben.",
     "footer_support": "Technischer Support"
   },
   "pt": {
@@ -297,6 +322,11 @@
     "feat_watchdog_desc": "Monitor Heartbeat que reinicia processos em 2s em caso de bloqueio.",
     "payoff_1": "Deixe de ser um KJ.",
     "payoff_2": "Comece a ser um REALIZADOR.",
+    "why_title": "POR QUE ESCOLHER PLATINUM?",
+    "why_p1": "20GB de pura potência tecnológica (Modelos de IA residentes no seu PC).",
+    "why_p2": "Automação Total: A noite flui sozinha, você só precisa aproveitar os aplausos.",
+    "why_p3": "Sincronização na Nuvem: Ativação instantânea e licença blindada.",
+    "why_p4": "Desenvolvido para Profissionais por quem realmente vive o palco.",
     "footer_support": "Suporte Técnico"
   }
 }
