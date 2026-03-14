@@ -81,12 +81,15 @@ const { t } = Astro.props;
                     </div>
                 </div>
 
-                <!-- PULSANTI CON LINK REALI CLOUDFLARE R2 -->
+                <!-- PULSANTI CON LINK DOMINIO PERSONALIZZATO -->
                 <div class="flex flex-wrap justify-center gap-y-4 gap-x-6 mb-12">
-                    <a href="https://pub-1c52bbbeeab45eeb69b87ba1095e7b9.r2.dev/YouTube_Karaoke_Player_Pro_Setup.exe" class="btn-platinum-green">
+                    {/* Tasto Verde - Installer del Player */}
+                    <a href="https://download.youtubekaraokeplayerpro.com/YouTube_Karaoke_Player_Pro_Setup.exe" class="btn-platinum-green">
                         <span>{t.btn_setup}</span>
                     </a>
-                    <a href="https://pub-1c52bbbeeab45eeb69b87ba1095e7b9.r2.dev/installer_motore.exe" class="btn-platinum-cyan">
+
+                    {/* Tasto Azzurro - Installer del Motore IA */}
+                    <a href="https://download.youtubekaraokeplayerpro.com/installer_motore.exe" class="btn-platinum-cyan">
                         <span>{t.btn_ia}</span>
                     </a>
                 </div>
