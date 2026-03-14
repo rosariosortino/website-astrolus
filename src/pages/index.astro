@@ -1,16 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AppHeader from "../components/AppHeader.astro";
 import HeroSection from "../components/HeroSection.astro";
+import ProductShowcase from "../components/ProductShowcase.astro"; // <-- AGGIUNGI QUESTO
 import Features from "../components/Features.astro";
 import CallToAction from "../components/CallToAction.astro";
-import translations from "../languages.json";
-
-const lang = "it";
-const t = translations[lang];
+// ... resto del codice
 ---
+
 <Layout lang={lang} t={t}>
+  <AppHeader lang={lang} t={t} />
   <main class="space-y-10">
     <HeroSection t={t} />
+    <ProductShowcase /> <!-- <-- AGGIUNGI QUESTO QUI -->
     <Features t={t} />
     <CallToAction t={t} />
   </main>
