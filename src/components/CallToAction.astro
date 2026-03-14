@@ -1,82 +1,47 @@
 ---
-import Container from "./Container.astro"
-
+const { t } = Astro.props;
 ---
 
-<div class="relative py-16">
-  <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-  </div>
-  <Container>
-    <div class="relative">
-      <div class="flex items-center justify-center -space-x-2">
-        <img
-          loading="lazy"
-          width="400"
-          height="400"
-          src="./images/avatars/avatar.webp"
-          alt="member photo"
-          class="h-8 w-8 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-2.webp"
-          alt="member photo"
-          class="h-12 w-12 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-3.webp"
-          alt="member photo"
-          class="z-10 h-16 w-16 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-4.webp"
-          alt="member photo"
-          class="relative h-12 w-12 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-1.webp"
-          alt="member photo"
-          class="h-8 w-8 rounded-full object-cover"
-        />
+<section class="relative py-20 bg-[#050505] flex flex-col items-center justify-center px-6">
+  
+  {/* BLOCCO 1: I 4 Motivi per scegliere Platinum */}
+  <div class="max-w-4xl w-full mb-16">
+    <h3 class="text-3xl font-black text-white text-center mb-10 tracking-widest uppercase">
+      {t.why_title}
+    </h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Card 1 */}
+      <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#00E5FF]/50 transition duration-300">
+        <span class="text-[#00E5FF] text-2xl">✅</span>
+        <p class="text-gray-300 font-medium leading-relaxed">{t.why_p1}</p>
       </div>
-      <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
-        <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">快速开始</h1>
-        <p class="text-center text-xl text-gray-600 dark:text-gray-300">
-          现代化的快速内容管理系统、中台系统、小程序开发系统、即使通信系统开发平台.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6">
-          <a
-              href="#"
-              class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-            >
-              <span class="relative text-base font-semibold text-white dark:text-dark"
-                >开始</span
-              >
-            </a>
-            <a
-              href="#"
-              class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-            >
-              <span
-                class="relative text-base font-semibold text-primary dark:text-white"
-                >更多</span
-              >
-          </a>
-        </div>
+      {/* Card 2 */}
+      <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#00E5FF]/50 transition duration-300">
+        <span class="text-[#00E5FF] text-2xl">✅</span>
+        <p class="text-gray-300 font-medium leading-relaxed">{t.why_p2}</p>
+      </div>
+      {/* Card 3 */}
+      <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#00E5FF]/50 transition duration-300">
+        <span class="text-[#00E5FF] text-2xl">✅</span>
+        <p class="text-gray-300 font-medium leading-relaxed">{t.why_p3}</p>
+      </div>
+      {/* Card 4 */}
+      <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#00E5FF]/50 transition duration-300">
+        <span class="text-[#00E5FF] text-2xl">✅</span>
+        <p class="text-gray-300 font-medium leading-relaxed">{t.why_p4}</p>
       </div>
     </div>
-  </Container>
-</div>
+  </div>
+
+  {/* BLOCCO 2: Il Payoff Gigante (Basato sul tuo Screenshot 5) */}
+  <div class="w-full max-w-5xl p-10 md:p-16 rounded-[2rem] bg-[#0a0a0a] border border-white/5 shadow-2xl flex flex-col items-center text-center">
+    <h2 class="text-4xl md:text-6xl font-black italic text-white tracking-tighter mb-2">
+      {t.payoff_1}
+    </h2>
+    <h2 class="text-4xl md:text-6xl font-black italic text-[#FF3366] tracking-tighter shadow-[#FF3366]/20 drop-shadow-lg">
+      {t.payoff_2}
+    </h2>
+  </div>
+
+</section>
