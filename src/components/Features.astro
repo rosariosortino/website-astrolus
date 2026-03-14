@@ -1,10 +1,9 @@
 ---
 // src/components/Features.astro
-// 1. Recuperiamo le traduzioni passate dal file index.astro
+// 1. Riceviamo l'oggetto traduzioni 't' dalla pagina (index, es, en, ecc.)
 const { t } = Astro.props;
 
-// 2. Definiamo la struttura dati: questa logica evita di scrivere 1000 righe di HTML
-// rendendo il file leggero e impossibile da "tagliare" per la chat.
+// 2. Struttura dati ottimizzata per il multilingua
 const categories = [
   {
     title: t.cat_console,
@@ -51,7 +50,7 @@ const categories = [
 <section id="features" class="py-24 bg-[#050505]">
   <div class="max-w-7xl mx-auto px-6 md:px-12">
     
-    {/* INTESTAZIONE SEZIONE: Tecnologia Avanzata + Arsenale */}
+    {/* INTESTAZIONE SEZIONE */}
     <div class="text-center mb-24">
       <h4 class="text-[#00E5FF] font-black uppercase tracking-[0.4em] mb-4 text-xs italic">
         {t.arsenal_header}
@@ -61,26 +60,26 @@ const categories = [
       </h2>
     </div>
 
-    {/* LOOP DELLE CATEGORIE (Console, Audio, etc.) */}
+    {/* LOOP DELLE CATEGORIE */}
     <div class="space-y-24">
       {categories.map((cat) => (
         <div class="group">
-          {/* Titolo Categoria con il tuo iconico bordo neon laterale */}
+          {/* Titolo Categoria con bordo neon colorato */}
           <h3 class={`text-xl font-black italic uppercase p-4 mb-10 bg-white/5 ${cat.borderColor} text-white inline-block tracking-tight`}>
             {cat.title}
           </h3>
 
-          {/* GRIGLIA CARTE: 4 colonne su desktop, 1 su mobile */}
+          {/* GRIGLIA CARTE */}
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {cat.items.map((item) => (
-              <div class="p-8 bg-[#0a0a0a] border border-white/5 hover:border-[#00E5FF]/40 transition-all duration-500 flex flex-col items-center text-center rounded-sm">
+              <div class="p-8 bg-[#0a0a0a] border border-white/5 hover:border-[#00E5FF]/40 transition-all duration-500 flex flex-col items-center text-center rounded-sm group/card">
                 
-                {/* ICONA */}
-                <div class="text-4xl mb-6 grayscale group-hover:grayscale-0 transition duration-500">
+                {/* ICONA CON EFFETTO HOVER */}
+                <div class="text-4xl mb-6 grayscale group-hover/card:grayscale-0 transition duration-500 transform group-hover/card:scale-110">
                   {item.icon}
                 </div>
                 
-                {/* TITOLO FEAT */}
+                {/* TITOLO FEATURE */}
                 <h4 class="text-white font-black italic uppercase text-lg mb-3 tracking-tighter">
                   {item.title}
                 </h4>
