@@ -1,5 +1,10 @@
 ---
 import Container from "./Container.astro"
+import languages from "../languages.json"
+
+// Recupera la lingua passata come proprietà, default "it"
+const { lang = "it" } = Astro.props;
+const t = languages[lang] || languages["it"];
 ---
 <div class="relative bg-[#050505] overflow-hidden" id="home">
     <!-- SFONDO AMBIENTALE -->
@@ -23,7 +28,7 @@ import Container from "./Container.astro"
                         <img src="/dashboard.jpg" class="slide-img anim-delay-8" alt="Dashboard" />
                         <img src="/filler.jpg" class="slide-img anim-delay-12" alt="Filler" />
                         <div class="screen-overlay"></div>
-                        <p class="screen-label text-[#00E5FF]">COMMAND CONSOLE</p>
+                        <p class="screen-label text-[#00E5FF]">{t.cat_console}</p>
                     </div>
                 </div>
 
@@ -46,42 +51,41 @@ import Container from "./Container.astro"
                         <img src="/prenotazioni%20e%20upload.jpg" class="slide-img anim-delay-8" alt="Upload" />
                         <img src="/2%20monitor.jpg" class="slide-img anim-delay-12" alt="Dual Monitor" />
                         <div class="screen-overlay"></div>
-                        <p class="screen-label text-[#FF2D55] right-6 left-auto">SMART INTERACTION</p>
+                        <p class="screen-label text-[#FF2D55] right-6 left-auto">{t.feat_booking_title}</p>
                     </div>
                 </div>
 
             </div>
 
-            <!-- TESTI E MANIFESTO -->
+            <!-- TESTI E MANIFESTO TRADOTTI -->
             <div class="text-center mt-24">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-[#FF2D55] font-black text-lg md:text-xl uppercase tracking-[0.5em] mb-6 italic opacity-90">
-                        FERMA TUTTO!!
+                        {t.hero_stop}
                     </h2>
                     <h1 class="text-white font-black text-4xl md:text-6xl uppercase italic tracking-tighter leading-tight mb-8">
-                        IL KARAOKE CHE CONOSCI <br/>
-                        <span class="text-[#00E5FF] drop-shadow-[0_0_15px_rgba(0,229,255,0.5)]">LO ABBIAMO REINVENTATO.</span>
+                        {t.hero_title} <br/>
+                        <span class="text-[#00E5FF] drop-shadow-[0_0_15px_rgba(0,229,255,0.5)]">{t.hero_accent}</span>
                     </h1>
                     
                     <p class="text-gray-400 text-base md:text-xl font-light leading-relaxed mb-12 italic max-w-2xl mx-auto">
-                        "Basta foglietti illeggibili, basi di scarsa qualità e tempi morti. <br class="hidden md:block"/> 
-                        È ora di cambiare galassia."
+                        {t.hero_quote}
                     </p>
 
                     <div class="inline-block border border-[#FFD700]/20 p-8 bg-[#FFD700]/5 rounded-3xl mb-16 max-w-2xl">
                         <h3 class="text-xl md:text-2xl font-black text-white uppercase italic tracking-tighter mb-3">
-                            FINE DELLA SCHIAVITÙ PROPRIETARIA.
+                            {t.manifesto_title}
                         </h3>
                         <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                            Crea le tue basi con l'IA e usale su <span class="text-white font-bold underline decoration-[#FFD700]">qualsiasi player del mondo</span>. Tu sei il padrone della tua musica.
+                            {t.manifesto_text}
                         </p>
                     </div>
                 </div>
 
-                <!-- PULSANTI -->
+                <!-- PULSANTI TRADOTTI -->
                 <div class="flex flex-wrap justify-center gap-y-4 gap-x-6 mb-12">
-                    <a href="#" class="btn-platinum-green"><span>SCARICA SETUP</span></a>
-                    <a href="#" class="btn-platinum-cyan"><span>INSTALLA MOTORE IA</span></a>
+                    <a href="#" class="btn-platinum-green"><span>{t.btn_setup}</span></a>
+                    <a href="#" class="btn-platinum-cyan"><span>{t.btn_ia}</span></a>
                 </div>
 
                 <p class="text-gray-600 text-[10px] uppercase tracking-[0.6em] font-bold">
