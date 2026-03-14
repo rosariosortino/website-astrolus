@@ -4,119 +4,91 @@ import Container from "./Container.astro"
 <div id="features" class="py-32 bg-[#050505] border-t border-white/5">
   <Container>
     <div class="text-center mb-24">
-      <h2 class="text-[#00E5FF] font-black uppercase tracking-[0.4em] text-sm mb-4">Specifiche Militari</h2>
-      <h3 class="text-5xl md:text-7xl font-black text-white uppercase italic tracking-tighter">L'ARSENALE DEL REGISTA.</h3>
+      <h2 class="text-[#FFD700] font-black text-4xl md:text-6xl uppercase italic tracking-tighter">
+        COSA RENDE IL TUO SHOW <br/> <span class="text-white">UNICO AL MONDO?</span>
+      </h2>
     </div>
 
-    <!-- SEZIONE 1: LA CONSOLE DI COMANDO (Sidebar) -->
-    <div class="mb-20">
-        <h4 class="text-[#AA00FF] font-black uppercase italic mb-8 border-l-4 border-[#AA00FF] pl-4">01. Console di Comando Real-Time</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="card-p">
-                <span class="text-3xl">🎙️</span>
-                <h5 class="t-cap">DJ Virtuale & Voce</h5>
-                <p class="t-desc">IA Gemini 2.0: gestisce l'intera serata, presenta i cantanti e racconta curiosità musicali con effetto Ducking automatico.</p>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- 1. CREATORE BASI -->
+      <div class="feature-card border-[#FF2D55]">
+        <div class="text-6xl mb-6">✨ 1</div>
+        <h3 class="feature-title">CREATORE DI BASI IA (ILLIMITATE!)</h3>
+        <p class="feature-text">"C'è questa canzone ma non esiste la base?" Da oggi LA CREI TU. In 3 minuti l'IA estrae la voce originale e sincronizza il testo sillaba per sillaba. Qualità studio, zero sforzo.</p>
+      </div>
+
+      <!-- 2. REGIA SMARTPHONE -->
+      <div class="feature-card border-[#00E5FF]">
+        <div class="text-6xl mb-6">✨ 2</div>
+        <h3 class="feature-title">LA REGIA NEL TUO SMARTPHONE</h3>
+        <p class="feature-text">Abbandona il PC! Gestisci volumi, scaletta, tonalità e banner mentre sei al bar o tra i tavoli a fare pubbliche relazioni. Dashboard Remota via Wi-Fi.</p>
+      </div>
+
+      <!-- 3. WEB BOOKING -->
+      <div class="feature-card border-[#00E676]">
+        <div class="text-6xl mb-6">✨ 3</div>
+        <h3 class="feature-title">ADDIO CARTA E PENNA (WEB BOOKING)</h3>
+        <p class="feature-text">Il tuo pubblico scansiona un QR Code e prenota dal proprio telefono. 300.000 brani, ricerca YouTube, Pitch e upload file tutto dal loro cellulare!</p>
+      </div>
+
+      <!-- 4. DJ VIRTUALE -->
+      <div class="feature-card border-[#AA00FF]">
+        <div class="text-6xl mb-6">✨ 4</div>
+        <h3 class="feature-title">DJ VIRTUALE CON CULTURA</h3>
+        <p class="feature-text">Mentre tu ti rilassi, l'IA (Gemini 2.0) presenta i cantanti, racconta curiosità e gestisce il countdown. Voce neurale perfetta in 6 lingue.</p>
+      </div>
+
+      <!-- 5. MONITOR BILLBOARD -->
+      <div class="feature-card border-[#FFD700]">
+        <div class="text-6xl mb-6">✨ 5</div>
+        <h3 class="feature-title">MONITOR PUBBLICO "BILLBOARD" V8</h3>
+        <p class="feature-text">Trasforma la sala in uno studio televisivo. Mostra chi canta, i prossimi 6 in coda e banner scorrevoli in tempo reale. La gente farà la fila!</p>
+      </div>
+
+      <!-- 6. MASTERING PRO -->
+      <div class="feature-card border-[#FF5722]">
+        <div class="text-6xl mb-6">✨ 6</div>
+        <h3 class="feature-title">AUDIO DA STUDIO (MASTERING PRO)</h3>
+        <p class="feature-text">Basta sbalzi di volume! Compressore dinamico e Turbo Boost (+50%) rendono ogni base potente e cristallina. La sala suonerà come mai prima.</p>
+      </div>
+
+    </div>
+
+    <!-- PERCHÉ SCEGLIERE PLATINUM (BOX RIASSUNTIVO) -->
+    <div class="mt-32 p-12 bg-[#0a0a0a] border-2 border-white/10 rounded-[3rem]">
+        <h4 class="text-white font-black text-3xl md:text-5xl uppercase italic text-center mb-12">PERCHÉ SCEGLIERE <span class="text-[#00E5FF]">PLATINUM?</span></h4>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="flex items-center space-x-4">
+                <span class="text-[#00E676] text-3xl">✅</span>
+                <p class="text-gray-300 text-lg"><strong>20GB di pura potenza:</strong> Modelli IA residenti sul tuo PC.</p>
             </div>
-            <div class="card-p">
-                <span class="text-3xl">📡</span>
-                <h5 class="t-cap">Radar AI Audio</h5>
-                <p class="t-desc">Analisi dinamica dei decibel: taglia pubblicità, intro parlate e silenzi finali tipici di YouTube in tempo reale.</p>
+            <div class="flex items-center space-x-4">
+                <span class="text-[#00E676] text-3xl">✅</span>
+                <p class="text-gray-300 text-lg"><strong>Automazione Totale:</strong> La serata scorre da sola, tu goditi i complimenti.</p>
             </div>
-            <div class="card-p">
-                <span class="text-3xl">📺</span>
-                <h5 class="t-cap">Monitor Billboard</h5>
-                <p class="t-desc">Secondo monitor dedicato al pubblico con QR Code, video karaoke, "Next Up" e banner scorrevoli personalizzabili.</p>
+            <div class="flex items-center space-x-4">
+                <span class="text-[#00E676] text-3xl">✅</span>
+                <p class="text-gray-300 text-lg"><strong>Sincro Cloud:</strong> Attivazione istantanea e licenza blindata.</p>
             </div>
-            <div class="card-p">
-                <span class="text-3xl">🎹</span>
-                <h5 class="t-cap">PITCH & MPV Core</h5>
-                <p class="t-desc">Transpose professionale +/- 6 semitoni su motore MPV. Gestione nativa 4K a 60fps per una fluidità mai vista.</p>
+            <div class="flex items-center space-x-4">
+                <span class="text-[#00E676] text-3xl">✅</span>
+                <p class="text-gray-300 text-lg"><strong>Sviluppato da KJ:</strong> Creato da chi il palco lo vive ogni sera.</p>
             </div>
         </div>
-    </div>
-
-    <!-- SEZIONE 2: AUDIO PROCESSOR & MASTERING -->
-    <div class="mb-20">
-        <h4 class="text-[#00E676] font-black uppercase italic mb-8 border-l-4 border-[#00E676] pl-4">02. Audio Rack & Mastering Engine</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="card-p border-[#00E676]">
-                <span class="text-3xl">🎛️</span>
-                <h5 class="t-cap">Compressore Dinamico</h5>
-                <p class="t-desc">Digital Leveler: livella istantaneamente basi di epoche diverse per un volume costante senza sbalzi dannosi.</p>
-            </div>
-            <div class="card-p border-[#00E676]">
-                <span class="text-3xl">🚀</span>
-                <h5 class="t-cap">Turbo Boost +6dB</h5>
-                <p class="t-desc">Guadagno extra calcolato al millisecondo tramite DSP interno per far esplodere le basi registrate a basso livello.</p>
-            </div>
-            <div class="card-p border-[#00E676]">
-                <span class="text-3xl">🎧</span>
-                <h5 class="t-cap">Filler Engine (Winamp)</h5>
-                <p class="t-desc">Gestione automatica della musica di sottofondo: Winamp sfuma (Fade In/Out) quando il cantante entra o esce di scena.</p>
-            </div>
+        
+        <div class="mt-20 text-center">
+            <p class="text-[#FF2D55] text-4xl md:text-6xl font-black uppercase italic tracking-tighter">
+                Smetti di fare il KJ. <br/>
+                <span class="text-white">Inizia a fare il REGISTA.</span>
+            </p>
         </div>
     </div>
-
-    <!-- SEZIONE 3: MANAGEMENT CENTER (9 TASTI) -->
-    <div class="mb-20">
-        <h4 class="text-[#FFD700] font-black uppercase italic mb-8 border-l-4 border-[#FFD700] pl-4">03. Centro Gestione & Automazione</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <div class="card-p">
-                <span class="text-3xl">🪄</span>
-                <h5 class="t-cap">AI Studio Wizard</h5>
-                <p class="t-desc">Separazione Demucs v4 e Sincro sillabica IA. Crea il tuo database .mp4 + .ass in un clic.</p>
-            </div>
-            <div class="card-p">
-                <span class="text-3xl">📱</span>
-                <h5 class="t-cap">Web Server & QR</h5>
-                <p class="t-desc">Addio carta! Il pubblico prenota dal tavolo, imposta il Pitch e carica file dal proprio smartphone.</p>
-            </div>
-            <div class="card-p">
-                <span class="text-3xl">📶</span>
-                <h5 class="t-cap">Dashboard Remota</h5>
-                <p class="t-desc">Gestisci mixer, volumi e scaletta camminando tra i tavoli via Tablet. Latenza zero protocollo UDP.</p>
-            </div>
-            <div class="card-p">
-                <span class="text-3xl">🔍</span>
-                <h5 class="t-cap">Global Search F9</h5>
-                <p class="t-desc">Ricerca ibrida istantanea su database locali da 300k brani e cattura automatica da YouTube.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SEZIONE 4: REGIA AVANZATA (12 TASTI) -->
-    <div>
-        <h4 class="text-[#FF1744] font-black uppercase italic mb-8 border-l-4 border-[#FF1744] pl-4">04. Manutenzione & Regia Avanzata</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="card-p border-gray-600">
-                <h5 class="t-cap">Database Clinic</h5>
-                <p class="t-desc">Ripara indici corrotti, deframmenta e recupera collegamenti master in totale sicurezza.</p>
-            </div>
-            <div class="card-p border-gray-600">
-                <h5 class="t-cap">Mirroring Integrale</h5>
-                <p class="t-desc">Backup totale: salva Database, Impostazioni e tutti i Cataloghi sul tuo Drive esterno con un clic.</p>
-            </div>
-            <div class="card-p border-gray-600">
-                <h5 class="t-cap">Ghost Browser</h5>
-                <p class="t-desc">Aggiornamento automatico dei certificati YouTube (Cookie Session) per download sempre attivi.</p>
-            </div>
-            <div class="card-p border-gray-600">
-                <h5 class="t-cap">Robot Watchdog</h5>
-                <p class="t-desc">Un "Heartbeat" costante monitora i processi e riavvia automaticamente il sistema in caso di freeze hardware.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="mt-32 p-16 bg-gradient-to-b from-[#0a0a0a] to-[#050505] border border-white/5 rounded-[3rem] text-center">
-        <h4 class="text-3xl md:text-5xl font-black text-white uppercase italic tracking-tighter mb-4">Smetti di essere un KJ.</h4>
-        <p class="text-[#FF2D55] text-4xl md:text-6xl font-black uppercase tracking-tighter italic">Inizia a fare il REGISTA.</p>
-    </div>
-
   </Container>
 </div>
 
 <style>
-    .card-p { @apply bg-[#0a0a0a] p-8 border-l-2 border-white/10 transition-all duration-300 hover:bg-[#111] hover:border-[#00E5FF] hover:translate-y-[-5px]; }
-    .t-cap { @apply text-white font-black uppercase italic mt-4 tracking-tighter; }
-    .t-desc { @apply text-gray-500 text-sm mt-2 leading-relaxed; }
+    .feature-card { @apply bg-[#0a0a0a] p-10 border-t-4 transition-all duration-300 hover:bg-[#111] hover:scale-105; }
+    .feature-title { @apply text-white font-black text-xl uppercase italic mb-4 tracking-tighter; }
+    .feature-text { @apply text-gray-500 text-base leading-relaxed; }
 </style>
