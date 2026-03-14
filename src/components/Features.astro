@@ -1,211 +1,128 @@
 ---
 import Container from "./Container.astro"
+import languages from "../languages.json"
+
+const { lang = "it" } = Astro.props;
+const t = languages[lang] || languages["it"];
 ---
 <div id="features" class="py-32 bg-[#050505] border-t border-white/5">
   <Container>
-    <!-- PARTE 1: LE 6 KILLER FEATURES (EMOZIONE) -->
     <div class="text-center mb-24">
-      <h2 class="text-[#FFD700] font-black text-4xl md:text-6xl uppercase italic tracking-tighter">
-        COSA RENDE IL TUO SHOW <br/> <span class="text-white">UNICO AL MONDO?</span>
-      </h2>
+      <h2 class="text-[#00E5FF] font-black uppercase tracking-[0.4em] text-sm mb-4">{t.arsenal_header}</h2>
+      <h3 class="text-5xl md:text-7xl font-black text-white uppercase italic tracking-tighter">{t.arsenal_title}</h3>
     </div>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-40">
-      <!-- 1. CREATORE BASI -->
-      <div class="feature-card border-[#FF2D55]">
-        <div class="text-6xl mb-6">🧠</div>
-        <div class="text-4xl font-black text-[#FF2D55] mb-2">✨ 1</div>
-        <h3 class="feature-title">CREATORE DI BASI IA</h3>
-        <p class="feature-text">"C'è questa canzone ma non esiste la base?" Da oggi LA CREI TU. In 3 minuti l'IA estrae la voce originale e sincronizza il testo sillaba per sillaba. Qualità studio, zero sforzo.</p>
-      </div>
-
-      <!-- 2. REGIA SMARTPHONE -->
-      <div class="feature-card border-[#00E5FF]">
-        <div class="text-6xl mb-6">📱</div>
-        <div class="text-4xl font-black text-[#00E5FF] mb-2">✨ 2</div>
-        <h3 class="feature-title">LA REGIA NEL TUO SMARTPHONE</h3>
-        <p class="feature-text">Abbandona il PC! Gestisci volumi, scaletta, tonalità e banner mentre sei al bar o tra i tavoli a fare pubbliche relazioni. Dashboard Remota via Wi-Fi.</p>
-      </div>
-
-      <!-- 3. WEB BOOKING -->
-      <div class="feature-card border-[#00E676]">
-        <div class="text-6xl mb-6">📲</div>
-        <div class="text-4xl font-black text-[#00E676] mb-2">✨ 3</div>
-        <h3 class="feature-title">ADDIO CARTA E PENNA</h3>
-        <p class="feature-text">Il tuo pubblico scansiona un QR Code e prenota dal proprio telefono. 300.000 brani, ricerca YouTube, Pitch e upload file tutto dal loro cellulare!</p>
-      </div>
-
-      <!-- 4. DJ VIRTUALE -->
-      <div class="feature-card border-[#AA00FF]">
-        <div class="text-6xl mb-6">🎙️</div>
-        <div class="text-4xl font-black text-[#AA00FF] mb-2">✨ 4</div>
-        <h3 class="feature-title">DJ VIRTUALE GEMINI 2.0</h3>
-        <p class="feature-text">Mentre tu ti rilassi, l'IA presenta i cantanti, racconta curiosità sui brani e gestisce il countdown. Voce neurale perfetta in 6 lingue.</p>
-      </div>
-
-      <!-- 5. MONITOR BILLBOARD -->
-      <div class="feature-card border-[#FFD700]">
-        <div class="text-6xl mb-6">📺</div>
-        <div class="text-4xl font-black text-[#FFD700] mb-2">✨ 5</div>
-        <h3 class="feature-title">MONITOR "BILLBOARD" V8</h3>
-        <p class="feature-text">Trasforma la sala in uno studio televisivo. Mostra chi canta, i prossimi 6 in coda, messaggi scorrevoli e il tuo logo in alta definizione.</p>
-      </div>
-
-      <!-- 6. MASTERING PRO -->
-      <div class="feature-card border-[#FF5722]">
-        <div class="text-6xl mb-6">🎛️</div>
-        <div class="text-4xl font-black text-[#FF5722] mb-2">✨ 6</div>
-        <h3 class="feature-title">AUDIO MASTERING PRO</h3>
-        <p class="feature-text">Basta sbalzi di volume! Il compressore dinamico e il Turbo Boost (+50%) rendono ogni base potente e cristallina. La sala suonerà come mai prima.</p>
-      </div>
-    </div>
-
-    <!-- PARTE 2: L'ARSENALE TECNICO (DETTAGLIO) -->
-    <div class="text-center mb-24">
-      <h2 class="text-[#00E5FF] font-black uppercase tracking-[0.4em] text-sm mb-4">Specifiche Militari</h2>
-      <h3 class="text-5xl md:text-7xl font-black text-white uppercase italic tracking-tighter">L'ARSENALE DEL REGISTA.</h3>
-    </div>
-
-    <!-- CATEGORIA 01: SIDEBAR (VIOLA/AZZURRO) -->
+    <!-- CATEGORIA 01 -->
     <div class="mb-20">
-        <h4 class="text-[#AA00FF] font-black uppercase italic mb-8 border-l-4 border-[#AA00FF] pl-4">01. Console di Comando Real-Time</h4>
+        <h4 class="text-[#AA00FF] font-black uppercase italic mb-8 border-l-4 border-[#AA00FF] pl-4">{t.cat_console}</h4>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div class="card-p border-[#AA00FF]">
                 <div class="text-4xl mb-4">📡</div>
-                <h5 class="t-cap">Radar AI Audio</h5>
-                <p class="t-desc">Analisi dinamica dei decibel: taglia pubblicità, intro parlate e silenzi finali di YouTube in tempo reale.</p>
+                <h5 class="t-cap">{t.feat_radar_title}</h5>
+                <p class="t-desc">{t.feat_radar_desc}</p>
             </div>
             <div class="card-p border-[#00E5FF]">
                 <div class="text-4xl mb-4">🔇</div>
-                <h5 class="t-cap">Tag Mute System</h5>
-                <p class="t-desc">Database interno che riconosce i marchi (Sing King, ecc.) e silenzia automaticamente le intro parlate.</p>
+                <h5 class="t-cap">{t.feat_tag_title}</h5>
+                <p class="t-desc">{t.feat_tag_desc}</p>
             </div>
             <div class="card-p border-[#AA00FF]">
-                <div class="text-4xl mb-4">🎧</div>
-                <h5 class="t-cap">Config Audio Pro</h5>
-                <p class="t-desc">Cambio istantaneo driver (DirectX, WASAPI, WaveOut) per eliminare ogni latenza hardware.</p>
+                <div class="text-4xl mb-4">📺</div>
+                <h5 class="t-cap">{t.feat_billboard_title}</h5>
+                <p class="t-desc">{t.feat_billboard_desc}</p>
             </div>
             <div class="card-p border-[#00E5FF]">
                 <div class="text-4xl mb-4">🎹</div>
-                <h5 class="t-cap">Collega Karafun</h5>
-                <p class="t-desc">Integrazione nativa: controlla Voce Guida e Cori di KaraFun direttamente dalla console Platinum.</p>
+                <h5 class="t-cap">{t.feat_pitch_title}</h5>
+                <p class="t-desc">{t.feat_pitch_desc}</p>
             </div>
         </div>
     </div>
 
-    <!-- CATEGORIA 02: AUDIO (VERDE) -->
+    <!-- CATEGORIA 02 -->
     <div class="mb-20">
-        <h4 class="text-[#00E676] font-black uppercase italic mb-8 border-l-4 border-[#00E676] pl-4">02. Audio Rack & Mastering Engine</h4>
+        <h4 class="text-[#00E676] font-black uppercase italic mb-8 border-l-4 border-[#00E676] pl-4">{t.cat_audio}</h4>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div class="card-p border-[#00E676]">
                 <div class="text-4xl mb-4">📊</div>
-                <h5 class="t-cap">31-Band EQ & RTA</h5>
-                <p class="t-desc">Equalizzatore professionale e analizzatore di spettro per tarare l'acustica del locale come in uno studio.</p>
+                <h5 class="t-cap">{t.feat_comp_title}</h5>
+                <p class="t-desc">{t.feat_comp_desc}</p>
             </div>
             <div class="card-p border-[#00E676]">
                 <div class="text-4xl mb-4">📻</div>
-                <h5 class="t-cap">Filler Engine (Winamp)</h5>
-                <p class="t-desc">Gestione automatica musica di sottofondo: Winamp sfuma (Fade) quando il cantante entra o esce.</p>
+                <h5 class="t-cap">{t.feat_filler_title}</h5>
+                <p class="t-desc">{t.feat_filler_desc}</p>
             </div>
             <div class="card-p border-[#00E676]">
                 <div class="text-4xl mb-4">🚀</div>
-                <h5 class="t-cap">Turbo Boost +6dB</h5>
-                <p class="t-desc">Guadagno extra digitale calcolato al millisecondo per basi vecchie o registrate a basso livello.</p>
+                <h5 class="t-cap">{t.feat_boost_title}</h5>
+                <p class="t-desc">{t.feat_boost_desc}</p>
             </div>
         </div>
     </div>
 
-    <!-- CATEGORIA 03: MANAGEMENT (ORO) -->
+    <!-- CATEGORIA 03 -->
     <div class="mb-20">
-        <h4 class="text-[#FFD700] font-black uppercase italic mb-8 border-l-4 border-[#FFD700] pl-4">03. Centro Gestione & Automazione</h4>
+        <h4 class="text-[#FFD700] font-black uppercase italic mb-8 border-l-4 border-[#FFD700] pl-4">{t.cat_mgmt}</h4>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div class="card-p border-[#FFD700]">
                 <div class="text-4xl mb-4">🔍</div>
-                <h5 class="t-cap">Global Search F9</h5>
-                <p class="t-desc">Il tasto magico: scansiona 300.000 brani locali e Cloud YouTube in millisecondi.</p>
+                <h5 class="t-cap">{t.feat_search_title}</h5>
+                <p class="t-desc">{t.feat_search_desc}</p>
             </div>
             <div class="card-p border-[#FFD700]">
-                <div class="text-4xl mb-4">⚖️</div>
-                <h5 class="t-cap">Logica Coda Intelligente</h5>
-                <p class="t-desc">Scegli tra "Priorità Equa" o "Priorità ai Nuovi" per gestire la folla senza lamentele.</p>
+                <div class="text-4xl mb-4">🎙️</div>
+                <h5 class="t-cap">{t.feat_dj_title}</h5>
+                <p class="t-desc">{t.feat_dj_desc}</p>
             </div>
             <div class="card-p border-[#FFD700]">
                 <div class="text-4xl mb-4">✍️</div>
-                <h5 class="t-cap">Sincro Sillabica IA</h5>
-                <p class="t-desc">L'IA ascolta il brano e genera file .ass professionali con anticipo rosso per la massima leggibilità.</p>
+                <h5 class="t-cap">{t.feat_wizard_title}</h5>
+                <p class="t-desc">{t.feat_wizard_desc}</p>
             </div>
             <div class="card-p border-[#FFD700]">
                 <div class="text-4xl mb-4">📶</div>
-                <h5 class="t-cap">Dashboard UDP</h5>
-                <p class="t-desc">Protocollo di rete militare per una risposta istantanea dei comandi remoti da smartphone.</p>
+                <h5 class="t-cap">{t.feat_udp_title}</h5>
+                <p class="t-desc">{t.feat_udp_desc}</p>
             </div>
         </div>
     </div>
 
-    <!-- CATEGORIA 04: ADVANCED (ROSSO) -->
+    <!-- CATEGORIA 04 -->
     <div class="mb-32">
-        <h4 class="text-[#FF1744] font-black uppercase italic mb-8 border-l-4 border-[#FF1744] pl-4">04. Manutenzione & Regia Avanzata</h4>
+        <h4 class="text-[#FF1744] font-black uppercase italic mb-8 border-l-4 border-[#FF1744] pl-4">{t.cat_adv}</h4>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div class="card-p border-[#FF1744]">
                 <div class="text-4xl mb-4">🛡️</div>
-                <h5 class="t-cap">Database Clinic</h5>
-                <p class="t-desc">Ripara indici corrotti, deframmenta e ottimizza i cataloghi per prestazioni sempre al top.</p>
+                <h5 class="t-cap">{t.feat_clinic_title}</h5>
+                <p class="t-desc">{t.feat_clinic_desc}</p>
             </div>
             <div class="card-p border-[#FF1744]">
                 <div class="text-4xl mb-4">💾</div>
-                <h5 class="t-cap">Mirroring Integrale</h5>
-                <p class="t-desc">Backup totale: salva Database, Impostazioni e tutti i Cataloghi sul tuo Drive esterno.</p>
+                <h5 class="t-cap">{t.feat_mirror_title}</h5>
+                <p class="t-desc">{t.feat_mirror_desc}</p>
             </div>
             <div class="card-p border-[#FF1744]">
-                <div class="text-4xl mb-4">👻</div>
-                <h5 class="t-cap">Ghost Browser</h5>
-                <p class="t-desc">Aggiornamento automatico certificati YouTube (Cookie Session) per download inarrestabili.</p>
+                <div class="text-4xl mb-4">🔐</div>
+                <h5 class="t-cap">{t.feat_booking_title}</h5>
+                <p class="t-desc">{t.feat_booking_desc}</p>
             </div>
             <div class="card-p border-[#FF1744]">
                 <div class="text-4xl mb-4">🤖</div>
-                <h5 class="t-cap">Robot Watchdog</h5>
-                <p class="t-desc">Monitor "Heartbeat" che riavvia i processi in 2 secondi in caso di freeze hardware.</p>
+                <h5 class="t-cap">{t.feat_watchdog_title}</h5>
+                <p class="t-desc">{t.feat_watchdog_desc}</p>
             </div>
         </div>
     </div>
 
-    <!-- PERCHÉ SCEGLIERE PLATINUM (BOX RIASSUNTIVO) -->
-    <div class="mt-20 p-12 bg-[#0a0a0a] border-2 border-white/10 rounded-[3rem]">
-        <h4 class="text-white font-black text-3xl md:text-5xl uppercase italic text-center mb-12">PERCHÉ SCEGLIERE <span class="text-[#00E5FF]">PLATINUM?</span></h4>
-        <div class="grid md:grid-cols-2 gap-8 text-left">
-            <div class="flex items-center space-x-4">
-                <span class="text-[#00E676] text-3xl">✅</span>
-                <p class="text-gray-300 text-lg"><strong>20GB di potenza locale:</strong> Modelli IA residenti sul tuo PC, non nel cloud.</p>
-            </div>
-            <div class="flex items-center space-x-4">
-                <span class="text-[#00E676] text-3xl">✅</span>
-                <p class="text-gray-300 text-lg"><strong>Automazione Totale:</strong> Il DJ Virtuale lavora per te, tu goditi il successo.</p>
-            </div>
-            <div class="flex items-center space-x-4">
-                <span class="text-[#00E676] text-3xl">✅</span>
-                <p class="text-gray-300 text-lg"><strong>Sincronizzazione Cloud:</strong> Licenza blindata e aggiornamenti istantanei.</p>
-            </div>
-            <div class="flex items-center space-x-4">
-                <span class="text-[#00E676] text-3xl">✅</span>
-                <p class="text-gray-300 text-lg"><strong>Creato da un KJ:</strong> Sviluppato per chi il palco lo vive davvero ogni sera.</p>
-            </div>
-        </div>
-        
-        <div class="mt-20 text-center">
-            <p class="text-[#FF2D55] text-4xl md:text-6xl font-black uppercase italic tracking-tighter">
-                Smetti di fare il KJ. <br/>
-                <span class="text-white">Inizia a fare il REGISTA.</span>
-            </p>
-        </div>
+    <div class="mt-32 p-16 bg-gradient-to-b from-[#0a0a0a] to-[#050505] border border-white/5 rounded-[3rem] text-center">
+        <h4 class="text-3xl md:text-5xl font-black text-white uppercase italic tracking-tighter mb-4">{t.payoff_1}</h4>
+        <p class="text-[#FF2D55] text-4xl md:text-6xl font-black uppercase tracking-tighter italic">{t.payoff_2}</p>
     </div>
   </Container>
 </div>
 
 <style>
-    .feature-card { @apply bg-[#0a0a0a] p-10 border-t-4 transition-all duration-300 hover:bg-[#111] hover:scale-105 flex flex-col items-center text-center; }
-    .feature-title { @apply text-white font-black text-xl uppercase italic mb-4 tracking-tighter; }
-    .feature-text { @apply text-gray-500 text-base leading-relaxed; }
-
     .card-p { @apply bg-[#0a0a0a] p-8 border-l-4 transition-all duration-300 hover:bg-[#111] hover:translate-y-[-5px] flex flex-col items-center text-center; }
     .t-cap { @apply text-white font-black uppercase italic mt-4 tracking-tighter; }
     .t-desc { @apply text-gray-500 text-sm mt-2 leading-relaxed; }
