@@ -1,129 +1,86 @@
 ---
-import Container from "./Container.astro"
-import languages from "../languages.json"
+const { t } = Astro.props;
 
-const { lang = "it" } = Astro.props;
-const t = languages[lang] || languages["it"];
+// Definiamo i colori dei bordi per ogni categoria come nei tuoi screenshot
+const categories = [
+  {
+    title: t.cat_console,
+    borderColor: "border-l-[6px] border-purple-600",
+    items: [
+      { title: t.feat_radar_title, desc: t.feat_radar_desc, icon: "📡" },
+      { title: t.feat_tag_title, desc: t.feat_tag_desc, icon: "🔇" },
+      { title: t.feat_billboard_title, desc: t.feat_billboard_desc, icon: "📺" },
+      { title: t.feat_pitch_title, desc: t.feat_pitch_desc, icon: "🎹" },
+    ]
+  },
+  {
+    title: t.cat_audio,
+    borderColor: "border-l-[6px] border-green-500",
+    items: [
+      { title: t.feat_comp_title, desc: t.feat_comp_desc, icon: "📊" },
+      { title: t.feat_filler_title, desc: t.feat_filler_desc, icon: "📻" },
+      { title: t.feat_boost_title, desc: t.feat_boost_desc, icon: "🚀" },
+    ]
+  },
+  {
+    title: t.cat_mgmt,
+    borderColor: "border-l-[6px] border-yellow-500",
+    items: [
+      { title: t.feat_search_title, desc: t.feat_search_desc, icon: "🔍" },
+      { title: t.feat_dj_title, desc: t.feat_dj_desc, icon: "🎙️" },
+      { title: t.feat_wizard_title, desc: t.feat_wizard_desc, icon: "🪄" },
+      { title: t.feat_udp_title, desc: t.feat_udp_desc, icon: "📊" },
+    ]
+  },
+  {
+    title: t.cat_adv,
+    borderColor: "border-l-[6px] border-red-600",
+    items: [
+      { title: t.feat_clinic_title, desc: t.feat_clinic_desc, icon: "🛡️" },
+      { title: t.feat_mirror_title, desc: t.feat_mirror_desc, icon: "💾" },
+      { title: t.feat_booking_title, desc: t.feat_booking_desc, icon: "🔑" },
+      { title: t.feat_watchdog_title, desc: t.feat_watchdog_desc, icon: "🤖" },
+    ]
+  }
+];
 ---
-<div id="features" class="py-32 bg-[#050505] border-t border-white/5">
-  <Container>
-    <div class="text-center mb-24">
-      <h2 class="text-[#00E5FF] font-black uppercase tracking-[0.4em] text-sm mb-4">{t.arsenal_header}</h2>
-      <h3 class="text-5xl md:text-7xl font-black text-white uppercase italic tracking-tighter">{t.arsenal_title}</h3>
+
+<section id="features" class="py-20 bg-[#050505]">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="text-center mb-20">
+      <h4 class="text-[#00E5FF] font-black uppercase tracking-[0.3em] mb-4 text-sm">{t.arsenal_header}</h4>
+      <h2 class="text-5xl md:text-7xl font-black italic text-white uppercase tracking-tighter">
+        {t.arsenal_title}
+      </h2>
     </div>
 
-    <!-- CATEGORIA 01 -->
-    <div class="mb-20">
-        <h4 class="text-[#AA00FF] font-black uppercase italic mb-8 border-l-4 border-[#AA00FF] pl-4">{t.cat_console}</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="card-p border-[#AA00FF]">
-                <div class="text-4xl mb-4">📡</div>
-                <h5 class="t-cap">{t.feat_radar_title}</h5>
-                <p class="t-desc">{t.feat_radar_desc}</p>
-            </div>
-            <div class="card-p border-[#00E5FF]">
-                <div class="text-4xl mb-4">🔇</div>
-                <h5 class="t-cap">{t.feat_tag_title}</h5>
-                <p class="t-desc">{t.feat_tag_desc}</p>
-            </div>
-            <div class="card-p border-[#AA00FF]">
-                <div class="text-4xl mb-4">📺</div>
-                <h5 class="t-cap">{t.feat_billboard_title}</h5>
-                <p class="t-desc">{t.feat_billboard_desc}</p>
-            </div>
-            <div class="card-p border-[#00E5FF]">
-                <div class="text-4xl mb-4">🎹</div>
-                <h5 class="t-cap">{t.feat_pitch_title}</h5>
-                <p class="t-desc">{t.feat_pitch_desc}</p>
-            </div>
+    <div class="space-y-20">
+      {categories.map((cat) => (
+        <div class="space-y-8">
+          {/* Titolo Categoria con bordo neon */}
+          <h3 class={`text-xl font-black italic uppercase p-4 bg-white/5 ${cat.borderColor} text-white inline-block`}>
+            {cat.title}
+          </h3>
+
+          {/* Griglia delle Card */}
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {cat.items.map((item) => (
+              <div class="p-8 bg-[#0a0a0a] border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col items-center text-center group">
+                <div class="text-3xl mb-6 group-hover:scale-125 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <h4 class="text-white font-black italic uppercase text-lg mb-3 tracking-tighter">
+                  {item.title}
+                </h4>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+      ))}
     </div>
-
-    <!-- CATEGORIA 02 -->
-    <div class="mb-20">
-        <h4 class="text-[#00E676] font-black uppercase italic mb-8 border-l-4 border-[#00E676] pl-4">{t.cat_audio}</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="card-p border-[#00E676]">
-                <div class="text-4xl mb-4">📊</div>
-                <h5 class="t-cap">{t.feat_comp_title}</h5>
-                <p class="t-desc">{t.feat_comp_desc}</p>
-            </div>
-            <div class="card-p border-[#00E676]">
-                <div class="text-4xl mb-4">📻</div>
-                <h5 class="t-cap">{t.feat_filler_title}</h5>
-                <p class="t-desc">{t.feat_filler_desc}</p>
-            </div>
-            <div class="card-p border-[#00E676]">
-                <div class="text-4xl mb-4">🚀</div>
-                <h5 class="t-cap">{t.feat_boost_title}</h5>
-                <p class="t-desc">{t.feat_boost_desc}</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- CATEGORIA 03 -->
-    <div class="mb-20">
-        <h4 class="text-[#FFD700] font-black uppercase italic mb-8 border-l-4 border-[#FFD700] pl-4">{t.cat_mgmt}</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="card-p border-[#FFD700]">
-                <div class="text-4xl mb-4">🔍</div>
-                <h5 class="t-cap">{t.feat_search_title}</h5>
-                <p class="t-desc">{t.feat_search_desc}</p>
-            </div>
-            <div class="card-p border-[#FFD700]">
-                <div class="text-4xl mb-4">🎙️</div>
-                <h5 class="t-cap">{t.feat_dj_title}</h5>
-                <p class="t-desc">{t.feat_dj_desc}</p>
-            </div>
-            <div class="card-p border-[#FFD700]">
-                <div class="text-4xl mb-4">✍️</div>
-                <h5 class="t-cap">{t.feat_wizard_title}</h5>
-                <p class="t-desc">{t.feat_wizard_desc}</p>
-            </div>
-            <div class="card-p border-[#FFD700]">
-                <div class="text-4xl mb-4">📶</div>
-                <h5 class="t-cap">{t.feat_udp_title}</h5>
-                <p class="t-desc">{t.feat_udp_desc}</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- CATEGORIA 04 -->
-    <div class="mb-32">
-        <h4 class="text-[#FF1744] font-black uppercase italic mb-8 border-l-4 border-[#FF1744] pl-4">{t.cat_adv}</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="card-p border-[#FF1744]">
-                <div class="text-4xl mb-4">🛡️</div>
-                <h5 class="t-cap">{t.feat_clinic_title}</h5>
-                <p class="t-desc">{t.feat_clinic_desc}</p>
-            </div>
-            <div class="card-p border-[#FF1744]">
-                <div class="text-4xl mb-4">💾</div>
-                <h5 class="t-cap">{t.feat_mirror_title}</h5>
-                <p class="t-desc">{t.feat_mirror_desc}</p>
-            </div>
-            <div class="card-p border-[#FF1744]">
-                <div class="text-4xl mb-4">🔐</div>
-                <h5 class="t-cap">{t.feat_booking_title}</h5>
-                <p class="t-desc">{t.feat_booking_desc}</p>
-            </div>
-            <div class="card-p border-[#FF1744]">
-                <div class="text-4xl mb-4">🤖</div>
-                <h5 class="t-cap">{t.feat_watchdog_title}</h5>
-                <p class="t-desc">{t.feat_watchdog_desc}</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="mt-32 p-16 bg-gradient-to-b from-[#0a0a0a] to-[#050505] border border-white/5 rounded-[3rem] text-center">
-        <h4 class="text-3xl md:text-5xl font-black text-white uppercase italic tracking-tighter mb-4">{t.payoff_1}</h4>
-        <p class="text-[#FF2D55] text-4xl md:text-6xl font-black uppercase tracking-tighter italic">{t.payoff_2}</p>
-    </div>
-  </Container>
-</div>
-
-<style>
-    .card-p { @apply bg-[#0a0a0a] p-8 border-l-4 transition-all duration-300 hover:bg-[#111] hover:translate-y-[-5px] flex flex-col items-center text-center; }
-    .t-cap { @apply text-white font-black uppercase italic mt-4 tracking-tighter; }
-    .t-desc { @apply text-gray-500 text-sm mt-2 leading-relaxed; }
-</style>
+  </div>
+</section>
