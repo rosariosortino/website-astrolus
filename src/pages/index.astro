@@ -7,7 +7,6 @@ import CallToAction from "../../components/CallToAction.astro";
 
 import translations from "../../languages.json";
 
-// Questa funzione dice ad Astro di generare le pagine per ogni lingua nel JSON
 export async function getStaticPaths() {
   return [
     { params: { lang: 'it' } },
