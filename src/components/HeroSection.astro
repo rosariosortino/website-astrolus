@@ -8,62 +8,47 @@ import Container from "./Container.astro"
     </div>
 
     <Container>
-        <div class="relative pt-52 pb-20 ml-auto">
+        <div class="relative pt-48 pb-20 ml-auto">
             <div class="lg:w-full text-center mx-auto">
-                
-                <!-- LOGO MONUMENTALE -->
-                <div class="relative inline-block mb-16 group">
-                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#FF2D55] blur-[100px] opacity-20 animate-pulse group-hover:opacity-40 transition-opacity duration-700"></div>
-                    <img src="/logo-platinum.png" alt="Logo" class="relative z-10 mx-auto transition-all duration-1000 group-hover:scale-105" style="width: 480px; max-width: 90vw; height: auto; filter: drop-shadow(0 0 60px rgba(0,229,255,0.4));"/>
+                <div class="relative inline-block mb-12 group">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#FF2D55] blur-[100px] opacity-20 animate-pulse group-hover:opacity-40 transition-opacity"></div>
+                    <img src="/logo-platinum.png" alt="Logo" class="relative z-10 mx-auto transition-transform duration-1000 group-hover:scale-105" style="width: 420px; max-width: 85vw; filter: drop-shadow(0 0 50px rgba(0,229,255,0.4));"/>
                 </div>
 
-                <!-- TITOLO NEON -->
-                <h1 class="font-black text-6xl md:text-7xl lg:text-8xl uppercase italic tracking-tighter leading-none text-white">
-                    <span class="text-[#FF0000] drop-shadow-[0_0_15px_rgba(255,0,0,0.5)]">YouTube</span> 
-                    <span class="text-[#FFD700] drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]">Karaoke</span> <br/>
-                    <span class="text-[#FF2D55] drop-shadow-[0_0_20px_rgba(255,45,85,0.7)]">Player</span> 
-                    <span class="text-[#00E5FF] drop-shadow-[0_0_20px_rgba(0,229,255,0.7)]">Pro</span>
+                <h1 class="font-black text-6xl md:text-8xl uppercase italic tracking-tighter leading-none text-white mb-10">
+                    <span class="text-[#FF0000] drop-shadow-[0_0_15px_rgba(255,0,0,0.5)]">YouTube</span> <span class="text-[#FFD700]">Karaoke</span> <br/>
+                    <span class="text-[#FF2D55]">Player</span> <span class="text-[#00E5FF]">Pro</span>
                 </h1>
 
-                <!-- IL MANIFESTO DELLA RIVOLUZIONE -->
-                <div class="mt-12 px-4 max-w-5xl mx-auto">
+                <div class="max-w-4xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-5xl font-black text-white uppercase italic tracking-tighter mb-8 leading-tight">
-                        FINE DELLA SCHIAVITÙ. <br/>
-                        <span class="text-[#00E5FF]">BENVENUTO NELLO STANDARD LIBERO.</span>
+                        FINE DELLA SCHIAVITÙ. <br/> <span class="text-[#00E5FF]">BENVENUTO NELLO STANDARD LIBERO.</span>
                     </h2>
-                    <p class="text-gray-400 text-xl md:text-2xl font-light leading-relaxed mb-10">
-                        Basta abbonamenti infiniti, player obsoleti e formati proprietari che ti legano le mani. 
-                        Platinum Karaoke Pro è la rivoluzione: crea le tue basi con l'IA e usale su <span class="text-white font-bold underline decoration-[#FFD700]">qualsiasi player del mondo</span>. 
-                        Tu sei il padrone della tua musica, noi ti diamo la tecnologia per dominarla.
+                    <p class="text-gray-400 text-xl md:text-2xl font-light leading-relaxed">
+                        Basta abbonamenti infiniti e formati proprietari obsoleti. Crea le tue basi con l'IA e usale su <span class="text-white font-bold underline decoration-[#FFD700]">qualsiasi player del mondo</span>. Tu sei il padrone della tua musica.
                     </p>
                 </div>
 
-                <!-- PULSANTI -->
-                <div class="mt-16 flex flex-wrap justify-center gap-y-6 gap-x-8">
-                    <a href="#" class="btn-platinum-green"><span>1. Scarica Setup Player</span></a>
-                    <a href="#" class="btn-platinum-cyan"><span>2. Installa Motore IA</span></a>
+                <div class="flex flex-wrap justify-center gap-y-6 gap-x-8 mb-24">
+                    <a href="#" class="btn-green"><span>1. Scarica Setup Player</span></a>
+                    <a href="#" class="btn-cyan"><span>2. Installa Motore IA</span></a>
                 </div>
 
-                <!-- SHOWCASE PLAYER FOTO -->
-                <div class="mt-24 relative group max-w-6xl mx-auto" id="showcase">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-[#00E5FF] via-[#FF2D55] to-[#FFD700] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                    <div class="relative bg-[#0d0d0d] rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
-                        <div class="bg-[#1a1a1a] px-4 py-2 border-b border-white/5 flex items-center space-x-2">
-                            <div class="w-3 h-3 rounded-full bg-[#FF1744]"></div>
-                            <div class="w-3 h-3 rounded-full bg-[#FFD700]"></div>
-                            <div class="w-3 h-3 rounded-full bg-[#00E676]"></div>
-                            <span class="text-[10px] text-gray-500 uppercase font-black tracking-widest pl-4 italic">Platinum Core Engine - Command Center v16.0</span>
-                        </div>
-                        <img src="/player-full.png" alt="Platinum Console" class="w-full h-auto opacity-95 group-hover:opacity-100 transition-opacity duration-500"/>
+                <!-- SHOWCASE PLAYER -->
+                <div class="relative group max-w-6xl mx-auto rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-[#0d0d0d]">
+                    <div class="bg-[#1a1a1a] px-4 py-2 border-b border-white/5 flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-[#FF1744]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#FFD700]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#00E676]"></div>
+                        <span class="text-[10px] text-gray-500 uppercase font-black tracking-widest pl-4 italic">Platinum Core Engine v16.0 - Command Console</span>
                     </div>
+                    <img src="/player-full.png" alt="Console" class="w-full h-auto opacity-95 group-hover:opacity-100 transition-opacity duration-500"/>
                 </div>
-
             </div>
         </div>
     </Container>
 </div>
-
 <style>
-    .btn-platinum-green { @apply relative flex h-16 w-full items-center justify-center px-10 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest text-lg hover:shadow-[0_0_50px_rgba(0,230,118,0.6)] hover:scale-110 active:scale-95; }
-    .btn-platinum-cyan { @apply relative flex h-16 w-full items-center justify-center px-10 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest text-lg hover:bg-[#00E5FF]/10 hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-110 active:scale-95; }
+    .btn-green { @apply relative flex h-16 w-full items-center justify-center px-10 transition-all duration-300 sm:w-max border-2 border-[#00E676] bg-[#00E676] text-black font-black uppercase tracking-widest text-lg hover:shadow-[0_0_50px_rgba(0,230,118,0.6)] hover:scale-110 active:scale-95; }
+    .btn-cyan { @apply relative flex h-16 w-full items-center justify-center px-10 transition-all duration-300 sm:w-max border-2 border-[#00E5FF] text-[#00E5FF] font-black uppercase tracking-widest text-lg hover:bg-[#00E5FF]/10 hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-110 active:scale-95; }
 </style>
