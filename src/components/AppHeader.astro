@@ -3,28 +3,56 @@ import Container from "./Container.astro";
 ---
 
 <header>
-    <nav class="z-50 w-full absolute border-b border-white/5 bg-[#050505]/50 backdrop-blur-md">
+    <nav class="z-50 w-full fixed top-0 border-b border-white/5 bg-[#050505]/80 backdrop-blur-xl">
         <Container>
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                 <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
                     <a href="/#home" aria-label="logo" class="flex items-center space-x-2">
-                        <span class="text-lg font-black tracking-tighter uppercase italic text-white">
-                            Platinum <span class="text-[#00E5FF]">Project</span>
+                        <span class="text-xl font-black tracking-tighter uppercase italic text-white">
+                            PLATINUM <span class="text-[#00E5FF]">PROJECT</span>
                         </span>
                     </a>
+                    
+                    <!-- Menu Mobile (Amburguesa) -->
+                    <div class="relative flex items-center lg:hidden max-h-10">
+                        <button aria-label="hamburguer" id="hamburger" class="relative p-6 -mr-6">
+                            <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-gray-300 transition duration-300"></div>
+                            <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-gray-300 transition duration-300"></div>
+                        </button>
+                    </div>
                 </div>
-                <div class="flex-wrap items-center justify-end w-full gap-6 flex">
-                    <div class="text-gray-300 lg:pr-4">
-                        <ul class="flex flex-row gap-6 text-sm font-bold uppercase tracking-widest">
-                            <li><a href="#features" class="hover:text-[#00E5FF] transition">Funzioni</a></li>
-                            <li><a href="mailto:rosario.sortino@gmail.com" class="hover:text-[#FF2D55] transition">Supporto</a></li>
+                
+                <div id="navlinks" class="hidden flex-col flex-wrap justify-end gap-6 w-full p-8 rounded-3xl border border-gray-100 bg-white shadow-2xl shadow-gray-300/20 justify-end lg:flex lg:flex-row lg:items-center lg:gap-0 lg:p-0 lg:bg-transparent lg:w-max lg:border-none lg:shadow-none dark:shadow-none dark:border-gray-700">
+                    <div class="text-gray-300 lg:pr-4 w-full lg:w-auto">
+                        <ul class="flex flex-col gap-6 tracking-widest text-sm font-black uppercase lg:flex-row lg:gap-12">
+                            <li>
+                                <a href="#features" class="hover:text-[#00E5FF] transition block">Funzioni</a>
+                            </li>
+                            <li>
+                                <a href="#showcase" class="hover:text-[#00E5FF] transition block">Software</a>
+                            </li>
+                            <li>
+                                <a href="mailto:rosario.sortino@gmail.com" class="hover:text-[#FF2D55] transition block">Supporto</a>
+                            </li>
                         </ul>
                     </div>
-                    <a href="#" class="relative flex h-10 items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-[#E91E63] before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
-                        <span class="relative text-sm font-bold text-white uppercase">Acquista Licenza</span>
-                    </a>
+
+                    <div class="mt-12 lg:mt-0">
+                        <a href="#checkout" class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-[#FF2D55] before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max border-b-4 border-black/20">
+                            <span class="relative text-sm font-black text-white uppercase italic">Acquista Licenza</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </Container>
     </nav>
 </header>
+
+<style>
+    #hamburger[aria-expanded="true"] #line {
+        @apply translate-y-1.5 rotate-45;
+    }
+    #hamburger[aria-expanded="true"] #line2 {
+        @apply -translate-y-1 -rotate-45;
+    }
+</style>
