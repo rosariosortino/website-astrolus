@@ -1,20 +1,33 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import AppHeader from "../components/AppHeader.astro";
-import HeroSection from "../components/HeroSection.astro";
-import Features from "../components/Features.astro"; // <-- Assicurati che ci sia
-import CallToAction from "../components/CallToAction.astro";
+import Layout from "../../layouts/Layout.astro";
+import AppHeader from "../../components/AppHeader.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import Features from "../../components/Features.astro";
+import CallToAction from "../../components/CallToAction.astro";
 
-import translations from "../languages.json";
-const lang = "it";
-const t = translations[lang];
+import translations from "../../languages.json";
+
+// Questa funzione dice ad Astro di generare le pagine per ogni lingua nel JSON
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'it' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = translations[lang || "it"];
 ---
 
 <Layout lang={lang}>
-  <AppHeader />
+  <AppHeader lang={lang} t={t} />
   <main class="space-y-10">
     <HeroSection t={t} />
-    <Features t={t} /> <!-- ECCOLO! Ora è di nuovo attivo -->
+    <Features t={t} />
     <CallToAction t={t} />
   </main>
 </Layout>
