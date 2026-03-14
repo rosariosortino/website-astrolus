@@ -1,17 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
+import ProductShowcase from "../components/ProductShowcase.astro";
 import Features from "../components/Features.astro";
 import CallToAction from "../components/CallToAction.astro";
 import translations from "../languages.json";
-
-// Qui diciamo al sito di usare lo Spagnolo
 const lang = "es";
 const t = translations[lang];
 ---
 <Layout lang={lang} t={t}>
   <main class="space-y-10">
-    <HeroSection t={t} />
+    <HeroSection lang={lang} t={t} />
+    <ProductShowcase />
     <Features t={t} />
     <CallToAction t={t} />
   </main>
