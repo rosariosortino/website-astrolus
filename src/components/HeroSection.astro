@@ -1,11 +1,11 @@
 ---
 // src/components/HeroSection.astro
 import Container from "./Container.astro"
-import languages from "../languages.json"
 
-// Recupera la lingua passata come proprietà dal "regista" (index.astro)
-const { lang = "it" } = Astro.props;
-const t = languages[lang] || languages["it"];
+// CORREZIONE CRUCIALE: 
+// Non importiamo più il json qui dentro e non forziamo più "it".
+// Prendiamo 't' (le traduzioni) direttamente dalla pagina che chiama il componente.
+const { t } = Astro.props;
 ---
 <div class="relative bg-[#050505] overflow-hidden" id="home">
     <!-- SFONDO AMBIENTALE -->
