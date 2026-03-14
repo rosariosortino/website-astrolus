@@ -1,9 +1,7 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
-
-// Recuperiamo la lingua dalle proprietà, default "it"
-const { lang = "it" } = Astro.props;
+import AppHeader from "../components/AppHeader.astro";
+const { lang = "it", t } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang={lang} class="dark">
@@ -15,12 +13,12 @@ const { lang = "it" } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-[#050505] text-white antialiased">
-		<AppHeader lang={lang}/>
+		<AppHeader lang={lang} t={t} />
 		<slot />
-		<AppFooter lang={lang}/>
+		<AppFooter lang={lang} t={t} />
 	</body>
 </html>
 <style is:global>
 	html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #050505; }
-	body { margin: 0; overflow-x: hidden; }
+	body { margin: 0; padding-top: 80px; overflow-x: hidden; }
 </style>
