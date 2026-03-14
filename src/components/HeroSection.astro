@@ -2,9 +2,7 @@
 // src/components/HeroSection.astro
 import Container from "./Container.astro"
 
-// CORREZIONE CRUCIALE: 
-// Non importiamo più il json qui dentro e non forziamo più "it".
-// Prendiamo 't' (le traduzioni) direttamente dalla pagina che chiama il componente.
+// Riceviamo le traduzioni 't' dalla pagina
 const { t } = Astro.props;
 ---
 <div class="relative bg-[#050505] overflow-hidden" id="home">
@@ -83,10 +81,14 @@ const { t } = Astro.props;
                     </div>
                 </div>
 
-                <!-- PULSANTI TRADOTTI -->
+                <!-- PULSANTI CON LINK REALI CLOUDFLARE R2 -->
                 <div class="flex flex-wrap justify-center gap-y-4 gap-x-6 mb-12">
-                    <a href="#" class="btn-platinum-green"><span>{t.btn_setup}</span></a>
-                    <a href="#" class="btn-platinum-cyan"><span>{t.btn_ia}</span></a>
+                    <a href="https://pub-1c52bbbeeab45eeb69b87ba1095e7b9.r2.dev/YouTube_Karaoke_Player_Pro_Setup.exe" class="btn-platinum-green">
+                        <span>{t.btn_setup}</span>
+                    </a>
+                    <a href="https://pub-1c52bbbeeab45eeb69b87ba1095e7b9.r2.dev/installer_motore.exe" class="btn-platinum-cyan">
+                        <span>{t.btn_ia}</span>
+                    </a>
                 </div>
 
                 <p class="text-gray-600 text-[10px] uppercase tracking-[0.6em] font-bold">
