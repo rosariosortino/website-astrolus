@@ -2,7 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import AppHeader from "../components/AppHeader.astro";
 import HeroSection from "../components/HeroSection.astro";
-import CallToAction from "../components/CallToAction.astro"; // <-- Aggiunto import
+import Features from "../components/Features.astro"; // <-- Assicurati che ci sia
+import CallToAction from "../components/CallToAction.astro";
 
 import translations from "../languages.json";
 const lang = "it";
@@ -11,12 +12,9 @@ const t = translations[lang];
 
 <Layout lang={lang}>
   <AppHeader />
-  
   <main class="space-y-10">
     <HeroSection t={t} />
-    
-    {/* Features le mettiamo dopo, stiamo andando per gradi */}
-    
-    <CallToAction t={t} /> {/* <-- Aggiunto componente */}
+    <Features t={t} /> <!-- ECCOLO! Ora è di nuovo attivo -->
+    <CallToAction t={t} />
   </main>
 </Layout>
