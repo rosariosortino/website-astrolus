@@ -1,53 +1,98 @@
 ---
 import Container from "./Container.astro"
 ---
-<div id="features" class="py-20 bg-[#050505]">
+<div id="features" class="py-32 bg-[#050505]">
   <Container>
-    <div class="md:w-2/3 lg:w-1/2">
-      <h2 class="text-[#00E5FF] font-black uppercase tracking-widest text-sm mb-4">L'Arsenale Platinum</h2>
-      <h3 class="text-4xl md:text-5xl font-bold text-white mb-8">Più di un Player. <br/>Una Regia Digitale.</h3>
+    <div class="text-center mb-20">
+      <h2 class="text-[#00E5FF] font-black uppercase tracking-[0.3em] text-sm mb-4">Specifiche Militari</h2>
+      <h3 class="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter">L'Arsenale del Regista.</h3>
     </div>
-    <div class="mt-16 grid gap-0 divide-x divide-y divide-gray-800 overflow-hidden rounded-3xl border border-gray-800 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">🧠</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF2D55]">AI Studio Wizard</h5>
-        <p class="text-gray-400 text-sm">Crea basi in un clic. L'IA estrae la voce e sincronizza il testo in standard universale .mp4/.ass.</p>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      
+      <!-- CATEGORIA: IA & STUDIO -->
+      <div class="card-platinum border-[#FF2D55]">
+        <span class="text-4xl">🪄</span>
+        <h5 class="text-white font-black uppercase italic mt-4">AI Studio Wizard</h5>
+        <p class="text-gray-400 text-sm mt-2">Separazione Demucs v4 in un clic. Estrai voce e base con qualità mastering usando la tua GPU NVIDIA.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">📡</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#00E5FF]">Radar RMS Pulse</h5>
-        <p class="text-gray-400 text-sm">Il sistema "ascolta" i decibel e taglia automaticamente pubblicità e silenzi finali dei video YouTube.</p>
+
+      <div class="card-platinum border-[#FF2D55]">
+        <span class="text-4xl">⏱️</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Magic Auto-Sync</h5>
+        <p class="text-gray-400 text-sm mt-2">L'IA ascolta il brano e sincronizza il testo sillaba per sillaba. Genera file .ass professionali in automatico.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">🎙️</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#00E676]">DJ Virtuale IA</h5>
-        <p class="text-gray-400 text-sm">Alimentato da Google Gemini 2.0. Gestisce la serata e presenta i cantanti con curiosità musicali.</p>
+
+      <!-- CATEGORIA: REGIA & AUTOMAZIONE -->
+      <div class="card-platinum border-[#00E5FF]">
+        <span class="text-4xl">🎙️</span>
+        <h5 class="text-white font-black uppercase italic mt-4">DJ Virtuale Gemini 2.0</h5>
+        <p class="text-gray-400 text-sm mt-2">Non un player, ma un assistente. Racconta curiosità sugli artisti e gestisce i countdown con voce neurale.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">📲</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#FFD700]">Web Server Cloud</h5>
-        <p class="text-gray-400 text-sm">Il pubblico prenota dallo smartphone via QR. Possono impostare il Pitch e caricare file personali.</p>
+
+      <div class="card-platinum border-[#00E5FF]">
+        <span class="text-4xl">📡</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Radar RMS Pulse</h5>
+        <p class="text-gray-400 text-sm mt-2">Analisi dinamica dei decibel: taglia automaticamente pubblicità, intro parlate e silenzi infiniti da YouTube.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">🎞️</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#00E5FF]">Engine MPV Pro</h5>
-        <p class="text-gray-400 text-sm">Qualità cinema a 60fps e 4K. Rendering sub-pixel per testi nitidi e fluidità assoluta.</p>
+
+      <!-- CATEGORIA: INTERAZIONE -->
+      <div class="card-platinum border-[#FFD700]">
+        <span class="text-4xl">📲</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Smart Booking QR</h5>
+        <p class="text-gray-400 text-sm mt-2">I clienti prenotano dal tavolo, scelgono il Pitch, cercano su YouTube o caricano i propri file personali.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">🎛️</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF2D55]">Mastering Audio</h5>
-        <p class="text-gray-400 text-sm">Compressore dinamico e Turbo Boost +6dB. Suono potente e bilanciato per tutta la notte.</p>
+
+      <div class="card-platinum border-[#FFD700]">
+        <span class="text-4xl">📱</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Regia Mobile UDP</h5>
+        <p class="text-gray-400 text-sm mt-2">Controlla mixer, volumi, scaletta e Billboard dal tuo tablet a latenza zero mentre fai pubbliche relazioni.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">📱</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#00E676]">Regia Mobile</h5>
-        <p class="text-gray-400 text-sm">Controlla volumi, scaletta e tonalità dal tuo tablet mentre sei tra i tavoli a fare pubbliche relazioni.</p>
+
+      <!-- CATEGORIA: AUDIO & MOTORE -->
+      <div class="card-platinum border-[#00E676]">
+        <span class="text-4xl">🎞️</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Engine MPV Cinema</h5>
+        <p class="text-gray-400 text-sm mt-2">Video a 60fps, 4K nativo e rendering sub-pixel dei testi. La massima fluidità video mai vista in un karaoke.</p>
       </div>
-      <div class="group bg-[#0a0a0a] p-8 transition hover:bg-[#0f0f0f]">
-        <div class="text-5xl mb-6">🔓</div>
-        <h5 class="text-xl font-bold text-white mb-2 group-hover:text-[#FFD700]">Standard Aperto</h5>
-        <p class="text-gray-400 text-sm">Genera progetti universali (.mp3, .mp4, .ass) compatibili con ogni player. Sei tu il padrone dei tuoi file.</p>
+
+      <div class="card-platinum border-[#00E676]">
+        <span class="text-4xl">🎛️</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Audio Rack DSP</h5>
+        <p class="text-gray-400 text-sm mt-2">Compressore dinamico, EQ 31-bande e Turbo Boost +6dB per basi vecchie o registrate a basso livello.</p>
       </div>
+
+      <!-- CATEGORIA: DATABASE & SECURITY -->
+      <div class="card-platinum border-gray-600">
+        <span class="text-4xl">🗄️</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Global Search F9</h5>
+        <p class="text-gray-400 text-sm mt-2">Scansiona centinaia di migliaia di file in millisecondi. Ricerca ibrida tra dischi locali e Cloud YouTube.</p>
+      </div>
+
+      <div class="card-platinum border-gray-600">
+        <span class="text-4xl">🛡️</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Database Clinic</h5>
+        <p class="text-gray-400 text-sm mt-2">Auto-riparazione degli indici, deframmentazione cataloghi e recupero collegamenti corrotti integrato.</p>
+      </div>
+
+      <div class="card-platinum border-gray-600">
+        <span class="text-4xl">🔐</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Self-Service License</h5>
+        <p class="text-gray-400 text-sm mt-2">Sposta la tua licenza da un PC all'altro in totale autonomia con il sistema di rilascio online Cloudflare.</p>
+      </div>
+
+      <div class="card-platinum border-gray-600">
+        <span class="text-4xl">🤖</span>
+        <h5 class="text-white font-black uppercase italic mt-4">Robot Watchdog</h5>
+        <p class="text-gray-400 text-sm mt-2">Un processo invisibile monitora lo stato del sistema e lo riavvia in 2 secondi in caso di freeze hardware.</p>
+      </div>
+
     </div>
   </Container>
 </div>
+
+<style>
+  .card-platinum {
+    @apply bg-[#0a0a0a] p-8 border-l-4 transition-all duration-300 hover:bg-[#111] hover:translate-y-[-5px] shadow-lg;
+  }
+</style>
