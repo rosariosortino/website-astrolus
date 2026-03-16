@@ -56,7 +56,22 @@
     "nav_features": "FUNZIONI",
     "nav_software": "SOFTWARE",
     "nav_support": "SUPPORTO",
-    "btn_buy": "ACQUISTA LICENZA"
+    "btn_buy": "ACQUISTA LICENZA",
+    "footer": {
+      "terms": "Termini di Servizio",
+      "privacy": "Privacy Policy",
+      "refund": "Politica di Rimborso",
+      "copyright": "© 2024 Platinum Karaoke Pro.",
+      "merchant": "Pagamenti sicuri via Lemon Squeezy."
+    },
+    "legal": {
+      "terms_title": "Termini di Servizio",
+      "privacy_title": "Privacy Policy",
+      "refund_title": "Politica di Rimborso",
+      "terms_content": "Benvenuto in Platinum Karaoke Pro. L'uso del software implica l'accettazione dei termini di licenza a vita B2B.",
+      "privacy_content": "Raccogliamo solo i dati necessari alla gestione della licenza (Email e ID Macchina).",
+      "refund_content": "Rimborso garantito entro 14 giorni in caso di accertata incompatibilità tecnica."
+    }
   },
   "es": {
     "hero_stop": "¡¡OLVIDA TODO LO DEMÁS!!",
@@ -115,7 +130,22 @@
     "nav_features": "FUNCIONES",
     "nav_software": "SOFTWARE",
     "nav_support": "SOPORTE",
-    "btn_buy": "COMPRAR LICENCIA"
+    "btn_buy": "COMPRAR LICENCIA",
+    "footer": {
+      "terms": "Términos de Servicio",
+      "privacy": "Privacidad",
+      "refund": "Reembolso",
+      "copyright": "© 2024 Platinum Karaoke Pro.",
+      "merchant": "Pagos seguros vía Lemon Squeezy."
+    },
+    "legal": {
+      "terms_title": "Términos de Servicio",
+      "privacy_title": "Privacidad",
+      "refund_title": "Reembolso",
+      "terms_content": "El uso del software implica la aceptación de la licencia de por vida.",
+      "privacy_content": "Solo procesamos datos para la activación de la licencia.",
+      "refund_content": "Garantía de devolución de 14 días por fallos técnicos."
+    }
   },
   "en": {
     "hero_stop": "FORGET EVERYTHING ELSE!!",
@@ -174,7 +204,22 @@
     "nav_features": "FEATURES",
     "nav_software": "SOFTWARE",
     "nav_support": "SUPPORT",
-    "btn_buy": "BUY LICENSE"
+    "btn_buy": "BUY LICENSE",
+    "footer": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "refund": "Refund Policy",
+      "copyright": "© 2024 Platinum Karaoke Pro.",
+      "merchant": "Secure payments by Lemon Squeezy."
+    },
+    "legal": {
+      "terms_title": "Terms of Service",
+      "privacy_title": "Privacy Policy",
+      "refund_title": "Refund Policy",
+      "terms_content": "Use of the software implies acceptance of the lifetime B2B license.",
+      "privacy_content": "We only collect data necessary for license management.",
+      "refund_content": "14-day refund guarantee for technical issues."
+    }
   },
   "fr": {
     "hero_stop": "OUBLIEZ TOUT LE RESTE !!",
@@ -188,7 +233,7 @@
     "btn_ia": "INSTALLER MOTEUR IA",
     "arsenal_header": "Technologie de Pointe",
     "arsenal_title": "L'ARSENALE DU RÉALISATEUR.",
-    "cat_console": "01. Console de Commande Real-Time",
+    "cat_console": "01. Console di Commande Real-Time",
     "cat_audio": "02. Audio Rack & Mastering Engine",
     "cat_mgmt": "03. Gestion Intelligente et Automation",
     "cat_adv": "04. Maintenance et Régie Avancée",
@@ -233,7 +278,22 @@
     "nav_features": "FONCTIONS",
     "nav_software": "LOGICIEL",
     "nav_support": "SUPPORT",
-    "btn_buy": "ACHETER LICENCE"
+    "btn_buy": "ACHETER LICENCE",
+    "footer": {
+      "terms": "Conditions",
+      "privacy": "Confidentialité",
+      "refund": "Remboursement",
+      "copyright": "© 2024 Platinum Karaoke Pro.",
+      "merchant": "Paiements sécurisés via Lemon Squeezy."
+    },
+    "legal": {
+      "terms_title": "Conditions",
+      "privacy_title": "Confidentialité",
+      "refund_title": "Remboursement",
+      "terms_content": "L'utilisation implique l'acceptation de la licence B2B.",
+      "privacy_content": "Données collectées uniquement per la licenza.",
+      "refund_content": "Remboursement sous 14 jours."
+    }
   },
   "de": {
     "hero_stop": "VERGESSEN SIE ALLES ANDERE!!",
@@ -292,7 +352,22 @@
     "nav_features": "FUNKTIONEN",
     "nav_software": "SOFTWARE",
     "nav_support": "SUPPORT",
-    "btn_buy": "LIZENZ KAUFEN"
+    "btn_buy": "LIZENZ KAUFEN",
+    "footer": {
+      "terms": "AGB",
+      "privacy": "Datenschutz",
+      "refund": "Erstattung",
+      "copyright": "© 2024 Platinum Karaoke Pro.",
+      "merchant": "Sichere Zahlungen via Lemon Squeezy."
+    },
+    "legal": {
+      "terms_title": "AGB",
+      "privacy_title": "Datenschutz",
+      "refund_title": "Erstattung",
+      "terms_content": "Die Nutzung beinhaltet die lebenslange B2B-Lizenz.",
+      "privacy_content": "Daten nur für Lizenzverwaltung.",
+      "refund_content": "14 Tage Rückgaberecht."
+    }
   },
   "pt": {
     "hero_stop": "ESQUEÇA TUDO O RESTO!!",
@@ -321,7 +396,7 @@
     "feat_comp_title": "Nivelador Dinâmico",
     "feat_comp_desc": "Equilíbrio de volume automático para um show sem interrupções.",
     "feat_boost_title": "Turbo Boost +6dB",
-    "feat_boost_desc": "Ganho digital extra para potenciar pistas gravadas em nível baixo.",
+    "feat_boost_desc": "Ganho digital extra para potenciar pistas grabadas em nível baixo.",
     "feat_filler_title": "Filler Engine",
     "feat_filler_desc": "Gestão inteligente de música de fundo com fundidos profissionais.",
     "feat_search_title": "Global Search F9",
@@ -351,6 +426,21 @@
     "nav_features": "FUNÇÕES",
     "nav_software": "SOFTWARE",
     "nav_support": "SUPORTE",
-    "btn_buy": "COMPRAR LICENÇA"
+    "btn_buy": "COMPRAR LICENÇA",
+    "footer": {
+      "terms": "Termos",
+      "privacy": "Privacidade",
+      "refund": "Reembolso",
+      "copyright": "© 2024 Platinum Karaoke Pro.",
+      "merchant": "Pagamentos seguros via Lemon Squeezy."
+    },
+    "legal": {
+      "terms_title": "Termos",
+      "privacy_title": "Privacidade",
+      "refund_title": "Reembolso",
+      "terms_content": "O uso implica aceitação da licença B2B vitalícia.",
+      "privacy_content": "Dados coletados apenas para licença.",
+      "refund_content": "Reembolso em 14 dias."
+    }
   }
 }
