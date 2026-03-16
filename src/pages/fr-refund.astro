@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import translations from "../languages.json";
+
+const lang = "fr";
+const t = translations[lang];
+---
+
+<Layout lang={lang} t={t}>
+  <main class="max-w-4xl mx-auto px-6 py-32 text-gray-300 min-h-screen">
+    <h1 class="text-4xl font-black text-white mb-8 border-b border-white/10 pb-4 uppercase tracking-tight">
+      {t.legal.refund_title}
+    </h1>
+    <div class="prose prose-invert prose-red max-w-none text-xl leading-relaxed space-y-4" set:html={t.legal.refund_content} />
+  </main>
+</Layout>
