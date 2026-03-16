@@ -5,23 +5,25 @@ import Container from "./Container.astro"
 // 2. Riceviamo la lingua corrente e le traduzioni dal Layout
 const { lang = 'it', t } = Astro.props;
 
-// 3. Logica per i link: l'italiano è alla root, gli altri in /en/, /es/ ecc.
-const prefix = lang === 'it' ? '' : `/${lang}`;
+// 3. LOGICA PIATTA: 
+// Se lang è 'it' -> il link sarà "/terms"
+// Se lang è 'en' -> il link sarà "/en-terms"
+const prefix = lang === 'it' ? '/' : `/${lang}-`;
 ---
 
 <footer class="py-12 border-t border-white/5 bg-[#050505]">
     <Container>
       <div class="flex flex-col items-center">
         
-        <!-- ROW 1: Link Legali Richiesti da Lemon Squeezy (Dinamici) -->
+        <!-- ROW 1: Link Legali PIATTI (Senza sottocartelle) -->
         <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-gray-400 uppercase text-[10px] sm:text-xs font-bold tracking-widest mb-8">
-          <a href=`${prefix}/terms` class="hover:text-[#00E5FF] transition-colors">{t.footer.terms}</a>
-          <a href=`${prefix}/privacy` class="hover:text-[#00E5FF] transition-colors">{t.footer.privacy}</a>
-          <a href=`${prefix}/refund` class="hover:text-[#FF2D55] transition-colors">{t.footer.refund}</a>
+          <a href=`${prefix}terms` class="hover:text-[#00E5FF] transition-colors">{t.footer.terms}</a>
+          <a href=`${prefix}privacy` class="hover:text-[#00E5FF] transition-colors">{t.footer.privacy}</a>
+          <a href=`${prefix}refund` class="hover:text-[#FF2D55] transition-colors">{t.footer.refund}</a>
           <a href="mailto:rosario.sortino@gmail.com" class="hover:text-white transition-colors">Support</a>
         </div>
 
-        <!-- ROW 2: Copyright e Info Merchant (Dinamici dal languages.json) -->
+        <!-- ROW 2: Copyright e Merchant -->
         <div class="text-center space-y-2">
           <p class="text-gray-600 text-xs sm:text-sm">
             {t.footer.copyright}
